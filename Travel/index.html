@@ -99,7 +99,6 @@
         <a class="link-next trip-header__link-next" href="#">View all</a>
     </div>
 
-    <!-- fix. если картинки будут добавлятся то нужно делать ширину в процентах для айтемов и флекс:врап для row -->
     <div class="trip-gallery">
         <div class="trip-gallery__block  trip-gallery__block-top">
             <div class="trip-gallery__item"> <!-- fix. возможно нужно обернуть картинку в тэг "а", или же даже получается сам айтем  -->
@@ -168,135 +167,141 @@
 
 
 <!-- TOP PLACES -->
-<section class="top-places container">
-    <div class="top-places__card">
-        <div class="top-places__place">
-            <img src="src/img/top-places/img-1.jpg" alt="">
-            <div class="top-places__place-footer">
-                <div class="top-places__place-name">NAGOYA</div>
-                <div class="top-places__place-stat">
-                    <div class="top-places__place-stat-item">221</div>
-                    <a href="" class="top-places__place-stat-ico">
-                        <i class="fas fa-heart"></i>
-                    </a>
-                    <div class="top-places__place-stat-item">50</div>
-                    <a href="" class="top-places__place-stat-ico">
-                        <i class="fas fa-comment-alt"></i>
-                    </a>
-                </div>
-            </div><!-- /.top-places__place-footer -->
-        </div><!-- /.top-places__place -->
-        <p class="top-places__card-text">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this.</p>
-        <button class="btn">See More</button>
+<section class="top-places-wrap container">
+    <div class="section-header">
+        <h2 class="section-header__title top-places-wrap__title">Today top places to visit</h2>
     </div>
 
-    <div class="top-places__card">
-        <div class="top-places__place">
-            <img src="src/img/top-places/img-2.jpg" alt="">
-            <div class="top-places__place-footer">
-                <div class="top-places__place-name">NIIGATA</div>
-                <div class="top-places__place-stat">
-                    <div class="top-places__place-stat-item">221</div>
-                    <a href="" class="top-places__place-stat-ico">
-                        <i class="fas fa-heart"></i>
-                    </a>
-                    <div class="top-places__place-stat-item">50</div>
-                    <a href="" class="top-places__place-stat-ico">
-                        <i class="fas fa-comment-alt"></i>
-                    </a>
-                </div>
-            </div><!-- /.top-places__place-footer -->
-        </div><!-- /.top-places__place -->
-        <p class="top-places__card-text">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this.</p>
-        <button class="btn">See More</button>
-    </div>
+    <div class="top-places">
+        <div class="top-places__card">
+            <div class="top-places__place">
+                <img src="src/img/top-places/img-1.jpg" alt="">
+                <div class="top-places__place-footer">
+                    <div class="top-places__place-name">NAGOYA</div>
+                    <div class="top-places__place-stat">
+                        <div class="top-places__place-stat-item">221</div>
+                        <a href="" class="top-places__place-stat-ico">
+                            <i class="fas fa-heart"></i>
+                        </a>
+                        <div class="top-places__place-stat-item">50</div>
+                        <a href="" class="top-places__place-stat-ico">
+                            <i class="fas fa-comment-alt"></i>
+                        </a>
+                    </div>
+                </div><!-- /.top-places__place-footer -->
+            </div><!-- /.top-places__place -->
+            <p class="top-places__card-text">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this.</p>
+            <button class="btn">See More</button>
+        </div>
 
-    <div class="top-places__card">
-        <div class="top-places__place">
-            <img src="src/img/top-places/img-3.jpg" alt="">
-            <div class="top-places__place-footer">
-                <div class="top-places__place-name">OSAKA</div>
-                <div class="top-places__place-stat">
-                    <div class="top-places__place-stat-item">221</div>
-                    <a href="" class="top-places__place-stat-ico">
-                        <i class="fas fa-heart"></i>
-                    </a>
-                    <div class="top-places__place-stat-item">50</div>
-                    <a href="" class="top-places__place-stat-ico">
-                        <i class="fas fa-comment-alt"></i>
-                    </a>
-                </div>
-            </div><!-- /.top-places__place-footer -->
-        </div><!-- /.top-places__place -->
-        <p class="top-places__card-text">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this.</p>
-        <button class="btn">See More</button>
-    </div>
+        <div class="top-places__card">
+            <div class="top-places__place">
+                <img src="src/img/top-places/img-2.jpg" alt="">
+                <div class="top-places__place-footer">
+                    <div class="top-places__place-name">NIIGATA</div>
+                    <div class="top-places__place-stat">
+                        <div class="top-places__place-stat-item">221</div>
+                        <a href="" class="top-places__place-stat-ico">
+                            <i class="fas fa-heart"></i>
+                        </a>
+                        <div class="top-places__place-stat-item">50</div>
+                        <a href="" class="top-places__place-stat-ico">
+                            <i class="fas fa-comment-alt"></i>
+                        </a>
+                    </div>
+                </div><!-- /.top-places__place-footer -->
+            </div><!-- /.top-places__place -->
+            <p class="top-places__card-text">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this.</p>
+            <button class="btn">See More</button>
+        </div>
 
-    <div class="top-places__card">
-        <div class="top-places__place">
-            <img src="src/img/top-places/img-4.jpg" alt="">
-            <div class="top-places__place-footer">
-                <div class="top-places__place-name">SAITAMA</div>
-                <div class="top-places__place-stat">
-                    <div class="top-places__place-stat-item">221</div>
-                    <a href="" class="top-places__place-stat-ico">
-                        <i class="fas fa-heart"></i>
-                    </a>
-                    <div class="top-places__place-stat-item">50</div>
-                    <a href="" class="top-places__place-stat-ico">
-                        <i class="fas fa-comment-alt"></i>
-                    </a>
-                </div>
-            </div><!-- /.top-places__place-footer -->
-        </div><!-- /.top-places__place -->
-        <p class="top-places__card-text">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this.</p>
-        <button class="btn">See More</button>
-    </div>
+        <div class="top-places__card">
+            <div class="top-places__place">
+                <img src="src/img/top-places/img-3.jpg" alt="">
+                <div class="top-places__place-footer">
+                    <div class="top-places__place-name">OSAKA</div>
+                    <div class="top-places__place-stat">
+                        <div class="top-places__place-stat-item">221</div>
+                        <a href="" class="top-places__place-stat-ico">
+                            <i class="fas fa-heart"></i>
+                        </a>
+                        <div class="top-places__place-stat-item">50</div>
+                        <a href="" class="top-places__place-stat-ico">
+                            <i class="fas fa-comment-alt"></i>
+                        </a>
+                    </div>
+                </div><!-- /.top-places__place-footer -->
+            </div><!-- /.top-places__place -->
+            <p class="top-places__card-text">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this.</p>
+            <button class="btn">See More</button>
+        </div>
 
-    <div class="top-places__card">
-        <div class="top-places__place">
-            <img src="src/img/top-places/img-5.jpg" alt="">
-            <div class="top-places__place-footer">
-                <div class="top-places__place-name">UENO</div>
-                <div class="top-places__place-stat">
-                    <div class="top-places__place-stat-item">221</div>
-                    <a href="" class="top-places__place-stat-ico">
-                        <i class="fas fa-heart"></i>
-                    </a>
-                    <div class="top-places__place-stat-item">50</div>
-                    <a href="" class="top-places__place-stat-ico">
-                        <i class="fas fa-comment-alt"></i>
-                    </a>
-                </div>
-            </div><!-- /.top-places__place-footer -->
-        </div><!-- /.top-places__place -->
-        <p class="top-places__card-text">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this.</p>
-        <button class="btn">See More</button>
-    </div>
+        <div class="top-places__card">
+            <div class="top-places__place">
+                <img src="src/img/top-places/img-4.jpg" alt="">
+                <div class="top-places__place-footer">
+                    <div class="top-places__place-name">SAITAMA</div>
+                    <div class="top-places__place-stat">
+                        <div class="top-places__place-stat-item">221</div>
+                        <a href="" class="top-places__place-stat-ico">
+                            <i class="fas fa-heart"></i>
+                        </a>
+                        <div class="top-places__place-stat-item">50</div>
+                        <a href="" class="top-places__place-stat-ico">
+                            <i class="fas fa-comment-alt"></i>
+                        </a>
+                    </div>
+                </div><!-- /.top-places__place-footer -->
+            </div><!-- /.top-places__place -->
+            <p class="top-places__card-text">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this.</p>
+            <button class="btn">See More</button>
+        </div>
 
-    <div class="top-places__card">
-        <div class="top-places__place">
-            <img src="src/img/top-places/img-6.jpg" alt="">
-            <div class="top-places__place-footer">
-                <div class="top-places__place-name">SHIBUYA</div>
-                <div class="top-places__place-stat">
-                    <div class="top-places__place-stat-item">221</div>
-                    <a href="" class="top-places__place-stat-ico">
-                        <i class="fas fa-heart"></i>
-                    </a>
-                    <div class="top-places__place-stat-item">50</div>
-                    <a href="" class="top-places__place-stat-ico">
-                        <i class="fas fa-comment-alt"></i>
-                    </a>
-                </div>
-            </div><!-- /.top-places__place-footer -->
-        </div><!-- /.top-places__place -->
-        <p class="top-places__card-text">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this.</p>
-        <button class="btn">See More</button>
+        <div class="top-places__card">
+            <div class="top-places__place">
+                <img src="src/img/top-places/img-5.jpg" alt="">
+                <div class="top-places__place-footer">
+                    <div class="top-places__place-name">UENO</div>
+                    <div class="top-places__place-stat">
+                        <div class="top-places__place-stat-item">221</div>
+                        <a href="" class="top-places__place-stat-ico">
+                            <i class="fas fa-heart"></i>
+                        </a>
+                        <div class="top-places__place-stat-item">50</div>
+                        <a href="" class="top-places__place-stat-ico">
+                            <i class="fas fa-comment-alt"></i>
+                        </a>
+                    </div>
+                </div><!-- /.top-places__place-footer -->
+            </div><!-- /.top-places__place -->
+            <p class="top-places__card-text">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this.</p>
+            <button class="btn">See More</button>
+        </div>
+
+        <div class="top-places__card">
+            <div class="top-places__place">
+                <img src="src/img/top-places/img-6.jpg" alt="">
+                <div class="top-places__place-footer">
+                    <div class="top-places__place-name">SHIBUYA</div>
+                    <div class="top-places__place-stat">
+                        <div class="top-places__place-stat-item">221</div>
+                        <a href="" class="top-places__place-stat-ico">
+                            <i class="fas fa-heart"></i>
+                        </a>
+                        <div class="top-places__place-stat-item">50</div>
+                        <a href="" class="top-places__place-stat-ico">
+                            <i class="fas fa-comment-alt"></i>
+                        </a>
+                    </div>
+                </div><!-- /.top-places__place-footer -->
+            </div><!-- /.top-places__place -->
+            <p class="top-places__card-text">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this.</p>
+            <button class="btn">See More</button>
+        </div>
+        <!-- /.top-places__card -->
     </div>
+    <!-- /.top-places__inner -->
 </section>
-
-<!-- fix. можно попоробовать сделать воспроизведение через чекбокс и стилизацией лэйбла в кнопку плеера. При нажатии на лэйбл должно запускаться видео -->
 <!-- VIDEO -->
 <div class="video">
 </div>
