@@ -564,17 +564,6 @@ h1, h2, h3, h4, h5, h6 {
   bottom: -10px;
 }
 
-@media screen and (max-width: 992px) {
-  .section-header__title {
-    margin-bottom: 25px;
-  }
-}
-
-.trip {
-  /* GALLERY */
-  /* /END GALLERY */
-}
-
 .trip__link-next {
   margin: 0;
   margin-right: 55px;
@@ -771,6 +760,10 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.top-places-wrap__title {
+  margin-top: 100px;
 }
 
 .top-places__card {
