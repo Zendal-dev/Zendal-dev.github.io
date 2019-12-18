@@ -1,0 +1,22 @@
+.header
+    padding: 0 100px
+    width: 100%
+
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 1000
+    @include mq-medium-md
+        padding: 0 50px
+    @include mq-medium-sm
+        padding: 0 30px
+    @include mq-small-sm
+        padding: 0 15px
+    &__inner
+        padding: 30px 0
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__logo
+        display: flex
+        flex-grow: 2

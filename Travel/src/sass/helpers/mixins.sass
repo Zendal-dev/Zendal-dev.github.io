@@ -1,0 +1,27 @@
+// MEDIA 
+@mixin mq-small-sm
+    @media screen and ( max-width: $screen-small-sm)
+        @content
+@mixin mq-small-md
+    @media screen and ( max-width: $screen-small-md)
+        @content
+@mixin mq-medium-sm
+    @media screen and ( max-width: $screen-medium-sm)
+        @content
+@mixin mq-medium-md
+    @media screen and ( max-width: $screen-medium-md)
+        @content
+
+
+// INTERFACE
+@mixin under-text-line
+    content: ''
+    display: block
+    width: 253px
+    height: 3px
+
+    background-color: $primary-dark
+
+    position: absolute
+    left: 0
+    bottom: -10px

@@ -1,0 +1,31 @@
+.form
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+    @include mq-medium-md
+        flex-direction: column
+        align-items: flex-start
+    &__input
+        width: 300px
+        margin-bottom: 20px
+        padding: 20px 37px
+
+        +medium
+        color: $white
+
+        outline: none
+        background: none
+        border: none
+        border-bottom: 2px solid $white
+        @include mq-small-sm
+            padding: 20px 30px
+        &::placeholder
+            font-size: 1.2rem
+            +medium
+            color: $white
+            @include mq-small-sm
+                font-size: 1rem
+    
+
+        

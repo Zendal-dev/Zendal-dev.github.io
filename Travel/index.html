@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Travel</title>
+    <link rel="stylesheet" href="src/css/normalize.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="https://kit.fontawesome.com/59cf1800a6.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+ 
+<!-- HEADER -->
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <div class="header__logo">
+                <img src="/src/img/logo.png" alt="">
+            </div>
+            <nav class="nav">
+                <a href="#" class="nav__link">Articles</a>
+                <a href="#" class="nav__link">Locations</a>
+                <a href="#" class="nav__link">Videos</a>
+                <a href="#" class="nav__link">Sign in</a>
+            </nav>
+        </div><!-- header__inner  -->
+    </div><!-- /container -->
+</header>
+
+
+<!-- INTRO -->
+<div class="intro">
+    <div class="container">
+        <div class="intro__inner">
+            <h1 class="intro__title">Discover Amazing places in Japan</h1>
+            <div class="intro__text">
+                Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this if i had the energy but under the bed, for attack the child, open the door, 
+            </div>
+        
+            <form class="form  intro__form" action="">
+                <input class="form__input" type="text" placeholder="What would you like to do?">
+                <input class="form__input" type="text" placeholder="Where would you like to go?">
+                <button class="btn  btn-search">Search</button>
+            </form>
+        </div><!-- /.intro__inner -->
+    </div><!-- /.container -->
+</div><!-- /.intro -->
+
+
+<!-- BENEFITS -->
+ <section class="benefits  container">
+    <div class="benefits__inner"> <!-- можно убрать, лишний -->
+        <h2 class="benefits__title">Benefits of Odigo</h2>
+
+        <div class="benefits__items">
+            <div class="benefits__item">
+                <div class="benefits__item-ico">
+                    <img  src="src/img/benefits/icon-1.png" alt="">
+                </div>
+                <h4 class="benefits__item-title">Welcome to Odigo!</h4>
+                <div class="benefits__item-text">
+                    Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over.
+                </div>
+                <a class="link-next" href="#">Learn more</a>
+            </div>
+
+            <div class="benefits__item">
+                <div class="benefits__item-ico">
+                    <img  src="src/img/benefits/icon-2.png" alt="">
+                </div>
+                <h4 class="benefits__item-title">Your Personal Japan Guide</h4>
+                <div class="benefits__item-text">
+                    Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over.
+                </div>
+                <a class="link-next " href="#">Learn more</a>
+            </div>
+
+            <div class="benefits__item">
+                <div class="benefits__item-ico">
+                    <img  src="src/img/benefits/icon-3.png" alt="">
+                </div>
+                <h4 class="benefits__item-title">Promoting Local Businesses</h4>
+                <div class="benefits__item-text">
+                    Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over.
+                </div>
+                <a class="link-next" href="#">Learn more</a>
+            </div>
+        </div><!-- /.benefits__items -->
+    </div><!-- /.benefits__inner -->
+ </section>
+
+
+ <!-- TRIP -->
+<section class="trip  container">
+    <div class="section-header">
+        <h2 class="section-header__title">Get inspired for your next trip</h2>
+        <a class="link-next trip-header__link-next" href="#">View all</a>
+    </div>
+
+    <!-- fix. если картинки будут добавлятся то нужно делать ширину в процентах для айтемов и флекс:врап для row -->
+    <div class="trip-gallery">
+        <div class="trip-gallery__block  trip-gallery__block-top">
+            <div class="trip-gallery__item"> <!-- fix. возможно нужно обернуть картинку в тэг "а", или же даже получается сам айтем  -->
+                <a class="trip-gallery__item-link" href="#"> 
+                    <img class="trip-gallery__item-img" src="src/img/trip/trip-1.jpg" alt="Mount Fuji">
+                </a>
+                <div class="trip-gallery__item-name">Mount Fuji</div>
+            </div>
+
+            <div class="trip-gallery__item">
+                <a class="trip-gallery__item-link" href="#"> 
+                    <img class="trip-gallery__item-img" src="src/img/trip/trip-2.jpg" alt="Kyoto">
+                </a>
+                <div class="trip-gallery__item-name">Kyoto</div>
+            </div>
+        </div><!-- /.gallery__block-top -->
+
+        <div class="trip-gallery__block  trip-gallery__block-bottom">
+            <div class="trip-gallery__item">
+                <a class="trip-gallery__item-link" href="#"> 
+                    <img class="trip-gallery__item-img" src="src/img/trip/trip-3.jpg" alt="Tokyo">
+                </a>
+                <div class="trip-gallery__item-name">Tokyo</div>
+            </div>
+
+            <div class="trip-gallery__item">
+                <a class="trip-gallery__item-link" href="#"> 
+                    <img class="trip-gallery__item-img" src="src/img/trip/trip-4.jpg" alt="Niigata">
+                </a>
+                <div class="trip-gallery__item-name">Niigata</div>
+            </div>
+
+            <div class="trip-gallery__item">
+                <a class="trip-gallery__item-link" href="#"> 
+                    <img class="trip-gallery__item-img" src="src/img/trip/trip-4.jpg" alt="Sapporo">
+                </a>
+                <div class="trip-gallery__item-name">Sapporo</div>
+            </div>
+        </div><!-- /.trip-gallery__block-bottom -->
+    </div><!-- /.trip__gallery -->
+
+    <div class="trip-about">
+        <div class="trip-about-block">
+            <div class="trip-about-block__img">
+                <img src="src/img/trip/about/about-1.jpg" alt="">
+            </div>
+            <div class="trip-about-block__content">
+                <h4 class="trip-about-block__title">Prefecture in Focus: Tottori</h4>
+                <p class="trip-about-block__text">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this if i had the energy but under the bed, for attack the child, open the door, </p>
+                <a href="" class="link-next">View prefecture</a>
+            </div>
+        </div>
+
+        <div class="trip-about-block">
+            <div class="trip-about-block__content">
+                <h4 class="trip-about-block__title">Featured Neighborhood: Kyoto’s Arashiyama</h4>
+                <p class="trip-about-block__text">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this if i had the energy but under the bed, for attack the child, open the door, </p>
+                <a href="" class="link-next">View prefecture</a>
+            </div>
+            <div class="trip-about-block__img">
+                <img src="src/img/trip/about/about-2.jpg" alt="">
+            </div>
+        </div>
+    </div><!-- /.trip-about -->
+</section>
+
+
+<!-- TOP PLACES -->
+<section class="top-places container">
+    <div class="top-places__card">
+        <div class="top-places__place">
+            <img src="src/img/top-places/img-1.jpg" alt="">
+            <div class="top-places__place-footer">
+                <div class="top-places__place-name">NAGOYA</div>
+                <div class="top-places__place-stat">
+                    <div class="top-places__place-stat-item">221</div>
+                    <a href="" class="top-places__place-stat-ico">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                    <div class="top-places__place-stat-item">50</div>
+                    <a href="" class="top-places__place-stat-ico">
+                        <i class="fas fa-comment-alt"></i>
+                    </a>
+                </div>
+            </div><!-- /.top-places__place-footer -->
+        </div><!-- /.top-places__place -->
+        <p class="top-places__card-text">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this.</p>
+        <button class="btn">See More</button>
+    </div>
+
+    <div class="top-places__card">
+        <div class="top-places__place">
+            <img src="src/img/top-places/img-2.jpg" alt="">
+            <div class="top-places__place-footer">
+                <div class="top-places__place-name">NIIGATA</div>
+                <div class="top-places__place-stat">
+                    <div class="top-places__place-stat-item">221</div>
+                    <a href="" class="top-places__place-stat-ico">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                    <div class="top-places__place-stat-item">50</div>
+                    <a href="" class="top-places__place-stat-ico">
+                        <i class="fas fa-comment-alt"></i>
+                    </a>
+                </div>
+            </div><!-- /.top-places__place-footer -->
+        </div><!-- /.top-places__place -->
+        <p class="top-places__card-text">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this.</p>
+        <button class="btn">See More</button>
+    </div>
+
+    <div class="top-places__card">
+        <div class="top-places__place">
+            <img src="src/img/top-places/img-3.jpg" alt="">
+            <div class="top-places__place-footer">
+                <div class="top-places__place-name">OSAKA</div>
+                <div class="top-places__place-stat">
+                    <div class="top-places__place-stat-item">221</div>
+                    <a href="" class="top-places__place-stat-ico">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                    <div class="top-places__place-stat-item">50</div>
+                    <a href="" class="top-places__place-stat-ico">
+                        <i class="fas fa-comment-alt"></i>
+                    </a>
+                </div>
+            </div><!-- /.top-places__place-footer -->
+        </div><!-- /.top-places__place -->
+        <p class="top-places__card-text">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this.</p>
+        <button class="btn">See More</button>
+    </div>
+
+    <div class="top-places__card">
+        <div class="top-places__place">
+            <img src="src/img/top-places/img-4.jpg" alt="">
+            <div class="top-places__place-footer">
+                <div class="top-places__place-name">SAITAMA</div>
+                <div class="top-places__place-stat">
+                    <div class="top-places__place-stat-item">221</div>
+                    <a href="" class="top-places__place-stat-ico">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                    <div class="top-places__place-stat-item">50</div>
+                    <a href="" class="top-places__place-stat-ico">
+                        <i class="fas fa-comment-alt"></i>
+                    </a>
+                </div>
+            </div><!-- /.top-places__place-footer -->
+        </div><!-- /.top-places__place -->
+        <p class="top-places__card-text">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this.</p>
+        <button class="btn">See More</button>
+    </div>
+
+    <div class="top-places__card">
+        <div class="top-places__place">
+            <img src="src/img/top-places/img-5.jpg" alt="">
+            <div class="top-places__place-footer">
+                <div class="top-places__place-name">UENO</div>
+                <div class="top-places__place-stat">
+                    <div class="top-places__place-stat-item">221</div>
+                    <a href="" class="top-places__place-stat-ico">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                    <div class="top-places__place-stat-item">50</div>
+                    <a href="" class="top-places__place-stat-ico">
+                        <i class="fas fa-comment-alt"></i>
+                    </a>
+                </div>
+            </div><!-- /.top-places__place-footer -->
+        </div><!-- /.top-places__place -->
+        <p class="top-places__card-text">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this.</p>
+        <button class="btn">See More</button>
+    </div>
+
+    <div class="top-places__card">
+        <div class="top-places__place">
+            <img src="src/img/top-places/img-6.jpg" alt="">
+            <div class="top-places__place-footer">
+                <div class="top-places__place-name">SHIBUYA</div>
+                <div class="top-places__place-stat">
+                    <div class="top-places__place-stat-item">221</div>
+                    <a href="" class="top-places__place-stat-ico">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                    <div class="top-places__place-stat-item">50</div>
+                    <a href="" class="top-places__place-stat-ico">
+                        <i class="fas fa-comment-alt"></i>
+                    </a>
+                </div>
+            </div><!-- /.top-places__place-footer -->
+        </div><!-- /.top-places__place -->
+        <p class="top-places__card-text">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this.</p>
+        <button class="btn">See More</button>
+    </div>
+</section>
+
+<!-- fix. можно попоробовать сделать воспроизведение через чекбокс и стилизацией лэйбла в кнопку плеера. При нажатии на лэйбл должно запускаться видео -->
+<!-- VIDEO -->
+<div class="video">
+</div>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer__inner">
+            <div class="footer__logo"></div>
+            <div class="footer__content">
+                <div class="footer__content-col">
+                    <a class="footer__content-link" href="#">Company</a>
+                    <a class="footer__content-link" href="#">About</a>
+                    <a class="footer__content-link" href="#">Team</a>
+                    <a class="footer__content-link" href="#">Careers</a>
+                    <a class="footer__content-link" href="#">Privacy Policy</a>
+                </div>
+                <div class="footer__content-col">
+                    <a class="footer__content-link" href="#">Locations</a>
+                    <a class="footer__content-link" href="#">Tokyo</a>
+                    <a class="footer__content-link" href="#">Kyoto</a>
+                    <a class="footer__content-link" href="#">Osaka</a>
+                    <a class="footer__content-link" href="#">Hokkaido</a>
+                </div>
+                <div class="footer__content-col">
+                    <a class="footer__content-link" href="#">Social Media</a>
+                    <a class="footer__content-link" href="#">Facebook</a>
+                    <a class="footer__content-link" href="#">Twitter</a>
+                    <a class="footer__content-link" href="#">Instagram</a>
+                    <a class="footer__content-link" href="#">Youtube</a>
+                </div>
+            </div>
+        </div><!-- /.footer__inner -->
+    </div><!-- /.container -->
+</footer>
+
+</body>
+</html>

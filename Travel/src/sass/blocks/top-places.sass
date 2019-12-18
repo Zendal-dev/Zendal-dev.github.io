@@ -1,0 +1,64 @@
+.top-places
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+    @include mq-medium-sm
+    &__card
+        min-width: 225px
+        flex-basis: 31%
+        margin-bottom: 60px
+        @include mq-medium-sm
+            flex-basis: 49%
+        @include mq-small-md
+            flex-basis: 79%
+            margin-right: auto
+            margin-left: auto
+        @include mq-small-sm
+            margin-bottom: 40px
+            flex: 100%
+        &-text
+            margin-bottom: 30px
+    &__place
+        margin-bottom: 35px
+        position: relative
+        img
+            display: block
+            max-width: 100%
+            @include mq-small-sm
+                margin-bottom: 40px
+                width: 100%
+        &-name
+            font-size: 1.2rem
+            +medium
+            color: $white
+        &-footer
+            padding: 15px 25px
+            width: 100%
+            display: flex
+            justify-content: space-between
+
+            background-color: rgba(21, 24, 36, 0.6);
+
+            position: absolute
+            left: 0
+            bottom: 0
+            @include mq-medium-sm
+                padding: 15px
+        &-stat
+            display: flex
+            font-size: 1.066rem
+            color: $white
+            +medium
+            &-item
+                margin-right: 4px
+            &-ico
+                margin-right: 15px
+                color: #fff
+                transition: color .1s linear
+                &:last-child
+                    margin-right: 0
+                &:hover
+                    color: darken(#fff, 20%)
+
+    
