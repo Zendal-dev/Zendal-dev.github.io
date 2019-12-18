@@ -1,9 +1,11 @@
-.top-places
+.top-places 
     display: flex
     flex-wrap: wrap
     justify-content: space-between
     align-items: center
-    @include mq-medium-sm
+    &-wrap
+        &__title
+            margin-top: 100px
     &__card
         min-width: 225px
         flex-basis: 31%
