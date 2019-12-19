@@ -1,0 +1,61 @@
+.works
+    &__inner
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+    &-card
+        margin-bottom: 20px
+        position: relative
+        border-radius: $radius
+        overflow: hidden
+        &:hover
+            .works-card-info
+                opacity: 1
+        &__img
+            max-width: 100%
+            height: auto
+            display: block
+        &-info
+            padding: 10px
+            width: 100%
+            max-width: 100%
+            height: 100%
+
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            opacity: 0
+
+            color: $white
+            background-color: rgba($primary-color, .9) 
+
+            position: absolute
+            top: 0
+            left: 0
+            transition: opacity .2s linear
+            &__title
+                margin-top: 0
+                font-size: 1.45rem
+                text-transform: uppercase
+            &__text
+                max-width: 250px
+                margin: 0 auto 40px
+
+                text-align: center
+                font-size: .9rem
+            &__btn
+
+
+@media ( max-width: $screen-xl-max )
+    .works
+        &__inner
+            justify-content: center
+        &-card
+            margin-left: 15px
+            margin-right: 15px
+@media ( max-width: $screen-md-max )
+    .works
+        &-card
+            margin-left: 0
+            margin-right: 0

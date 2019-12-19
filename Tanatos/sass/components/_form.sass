@@ -1,0 +1,24 @@
+.form
+    &-subscribe
+        padding: 20px
+        width: 100%
+        max-width: 900px
+        margin: 0 auto
+        display: flex
+    &__field
+        padding: 20px 25px
+        border: none
+        border-radius: $radius
+        &--subs
+            flex-grow: 1
+
+@media ( max-width: $screen-md-max)
+    .form
+        &-subscribe
+            flex-direction: column
+        &__field--subs
+            margin-bottom: 30px
+@media ( min-width: $screen-md-min)
+    .form
+        &__field--subs
+            margin-right: 30px

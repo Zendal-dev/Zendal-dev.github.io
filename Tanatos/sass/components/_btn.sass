@@ -1,0 +1,27 @@
+.btn
+    padding: 20px 90px
+    color: $white
+    text-transform: uppercase
+    text-decoration: none
+
+    background-color: $primary-color
+    border: none
+    border-radius: $radius
+
+    transition: all .1s linear
+    &:hover
+        background-color: lighten($primary-color, 5%)
+    &:active
+        background-color: $black
+    &--white
+        color: $primary-color
+        font-weight: 600
+        background-color:  $white
+        &:hover
+             background-color: darken($white, 7%)
+
+@media ( max-width: $screen-xs-max )
+    .btn
+        &--white
+            padding-left: 40px
+            padding-right: 40px
