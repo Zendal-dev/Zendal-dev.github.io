@@ -270,6 +270,94 @@ body {
   }
 }
 
+.reviews {
+  padding: 100px 0;
+  background: #3b434c url(../img/reviews/reviews-bg.jpg) no-repeat center/cover;
+}
+
+.reviews-slider__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #fff;
+  position: relative;
+}
+
+.reviews-slider__item::before, .reviews-slider__item::after {
+  content: '';
+  width: 40px;
+  height: 40px;
+  border: 2px solid #65686b;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+}
+
+.reviews-slider__item::before {
+  left: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.reviews-slider__item::after {
+  right: 0;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+.reviews__author-img {
+  margin-bottom: 50px;
+  max-width: 120px;
+  max-height: 120px;
+  border-radius: 50%;
+}
+
+.reviews__text {
+  margin-bottom: 40px;
+  max-width: 800px;
+  font-size: 1.45rem;
+  line-height: 2.2;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+}
+
+.reviews__author {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  .reviews {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 479px) {
+  .reviews__author-img {
+    margin-bottom: 20px;
+  }
+  .reviews__text {
+    line-height: 1.6;
+  }
+}
+
 .form-subscribe {
   padding: 20px;
   width: 100%;
@@ -388,6 +476,10 @@ body {
   font-weight: 600;
   background-color: #fff;
   border: 1px solid #eceded;
+}
+
+.btn-o:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 479px) {

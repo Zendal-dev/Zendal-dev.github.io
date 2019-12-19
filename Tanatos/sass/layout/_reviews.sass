@@ -1,0 +1,64 @@
+.reviews
+    padding: 100px 0
+    background: $black url(../img/reviews/reviews-bg.jpg) no-repeat center/cover
+    &-slider__item
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+
+        color: $white
+        position: relative
+        &::before,
+        &::after
+            content: ''
+            width: 40px
+            height: 40px
+
+            border: 2px solid #65686b
+            border-top-color: transparent
+            border-right-color: transparent
+            border-radius: 5px
+
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            transition: all .1s linear
+        &::before
+            left: 0
+            transform: rotate(45deg)
+        &::after
+            right: 0
+            transform: rotate(-135deg)
+
+
+
+    &__author-img
+        margin-bottom: 50px
+        max-width: 120px
+        max-height: 120px
+        border-radius: 50%
+    &__text
+        margin-bottom: 40px
+        max-width: 800px
+
+        font-size: 1.45rem
+        line-height: 2.2
+        font-weight: 300
+        font-style: italic
+        text-align: center
+    &__author
+        font-size: 1.1rem
+        font-weight: 600
+    
+@media ( max-width: $screen-md-max )
+    .reviews
+        padding: 60px 0
+
+@media ( max-width: $screen-xs-max )
+    .reviews
+        &__author-img
+            margin-bottom: 20px
+        &__text
+            line-height: 1.6
+    
