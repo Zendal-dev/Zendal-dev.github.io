@@ -1,17 +1,22 @@
 .socials
     display: flex
+    flex-wrap: wrap
     justify-content: center
     align-items: center
-    &__ico
+    &__link
+        width: 24px
+        height: 24px
         margin: 5px
-        font-size: 1.5rem
-        border-radius: 50%
-        &-fb
-            color: #205b9f 
-        &-tw
-            color: #fff
-            padding: 5px
-            font-size: .8rem
-            background-color: #00ace3
-        &-google
-            color: #ff3921
+        transition: opacity .1s
+        &:hover
+            opacity: 0.8
+        &--big
+            width: 43px
+            height: 43px
+            margin: 10px
+    
+@media ( max-width: $screen-xs-max )
+    .socials
+        
+        &__link
+            width: 20%

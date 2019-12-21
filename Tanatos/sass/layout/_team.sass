@@ -9,25 +9,19 @@
             color: $gray-light
             text-align: center
             &:hover
-                & > *:not(.socials)
+                & *
                     color: $black
-                .team-slider__img-wrap
                     filter: grayscale(0)
+                .team-slider__img-wrap
                     transform: scale(1.1) translateY(-15px)
                     &::before
                         opacity: 1
             & * 
+                filter: grayscale(1)
                 transition: all .2s 
-            & .socials 
-                &__ico
-                    color: $gray-light
-                    &-tw
-                        color: #fff
-                        background-color: $gray-light
         &__img-wrap
             margin-bottom: 30px
             position: relative
-            filter: grayscale(1)
             border-radius: $radius
             &::before
                 content: ''

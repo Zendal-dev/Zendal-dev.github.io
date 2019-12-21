@@ -13,7 +13,7 @@
     border-radius: $radius
     transition: all .1s linear
     &:hover
-        background-color: lighten($primary-color, 5%)
+        background-color: darken($primary-color, 5%)
     &:active
         background-color: $black
     &--white
@@ -22,8 +22,8 @@
         background-color:  $white
         &:hover
              background-color: darken($white, 7%)        
-    &-subs
-        max-width: 270px
+    &--subs
+        flex-grow: 1
     &-o
         padding: 15px 0
         color: $black
@@ -39,3 +39,4 @@
         &--white
             padding-left: 40px
             padding-right: 40px
+
