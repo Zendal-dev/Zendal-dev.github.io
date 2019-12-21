@@ -30,9 +30,6 @@
         &::after
             right: 0
             transform: rotate(-135deg)
-
-
-
     &__author-img
         margin-bottom: 50px
         max-width: 120px
@@ -51,14 +48,25 @@
         font-size: 1.1rem
         font-weight: 600
     
+@media ( max-width: $screen-lg-max )
+    .reviews
+        &-slider__item
+            &::before,
+            &::after
+                top: 35%
+            &::before
+                left: 30%
+            &::after
+                right: 30%
+        &__author-img
+            margin-bottom: 100px
+
 @media ( max-width: $screen-md-max )
     .reviews
         padding: 60px 0
 
 @media ( max-width: $screen-xs-max )
     .reviews
-        &__author-img
-            margin-bottom: 20px
         &__text
             line-height: 1.6
     
