@@ -1,0 +1,1 @@
+Может быть вместо section__title and section__text было бы уместнее title и text.
