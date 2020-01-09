@@ -14,21 +14,26 @@
 <!-- === Header === -->
 <header class="header">
     <div class="container">
-        <div class="burger active">
-            <span class="burger__item"></span>
+        <div class="burger">
+            <input class="burger__toggle" id="burger-toggle" type="checkbox">
+            <label class="burger__item" for="burger-toggle">
+                <span></span>
+            </label>
+            
+            <nav class="header-nav nav">
+                <a href="#" class="header-nav__link nav__link">Menu</a>
+                <a href="#" class="header-nav__link nav__link">Our story</a>
+                <span class="header__logo">Eudora</span>
+                <a href="#" class="header-nav__link nav__link">Offer</a>
+                <a href="#" class="header-nav__link nav__link">Contact</a>
+            </nav>
+            <!-- /.nav -->
         </div>
         <!-- /.burger -->
-        <nav class="header-nav nav">
-            <a href="#" class="header-nav__link nav__link">Menu</a>
-            <a href="#" class="header-nav__link nav__link">Our story</a>
-            <span class="header__logo">Eudora</span>
-            <a href="#" class="header-nav__link nav__link">Offer</a>
-            <a href="#" class="header-nav__link nav__link">Contact</a>
-        </nav>
-        <!-- /.nav -->
     </div>
     <!-- /.container -->
 </header>
+
 
 <!-- === Intro === -->
 <div class="intro">
