@@ -37,7 +37,7 @@ a {
 
 .container {
   width: 100%;
-  max-width: 1490;
+  max-width: 1490px;
   margin: auto;
   padding: 0 20px;
 }
