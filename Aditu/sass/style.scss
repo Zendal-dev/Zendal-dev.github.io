@@ -75,13 +75,11 @@ input {
    background: url("../img/header/search.png") no-repeat;
 }
 .basket {
-   display: flex;
-   align-items: flex-end;
-}
-.basket__amount {
-   margin-left: 15px;
    font-size: 2rem;
    color: $dark-gray;
+}
+.basket__ico {
+   margin-right: 15px;
 }
 
 @media (min-width: $screen-xs-min) {
@@ -128,10 +126,8 @@ input {
    white-space: nowrap;
    transition: all .1s ease-out;
 }
-.nav__item {
-   margin: 0 auto;
-}
 .nav__link {
+   margin: 0 auto;
    transition: color .1s;
    &:hover {
       color: lighten($primary, 40%);
@@ -153,7 +149,7 @@ input {
       font-size: 0;
       justify-content: center;
    }
-   .nav__item {
+   .nav__link {
       margin: 0 10px 20px 5px;
    }
 }
@@ -236,7 +232,7 @@ input {
 
 @media (max-width: $screen-xs-max) {
    .burger__item {
-      margin: 0 auto 20px;
+      margin: 10px auto 20px;
    }
 }
 
@@ -282,22 +278,6 @@ input {
    line-height: 1.5;
    overflow: hidden;
    text-overflow: ellipsis;
-}
-.intro-content__btn {
-   display: inline-block;
-   padding: 10px 25px 8px;
-
-   font-size: 1.5rem;
-   letter-spacing: 1px;
-
-   border: 3px solid $white;
-   border-radius: $radius;
-
-   transition: all .2s linear;
-   &:hover, &:active {
-      color: $primary;
-      background: $white;
-   }
 }
 
 @media (max-width: $screen-md-max) {
@@ -358,15 +338,14 @@ input {
 .categories-inner__item-content {
    margin-left: 30px;
    max-width: 100px;
-   display: flex;
-   align-items: flex-start;
-   justify-content: center;
-   flex-direction: column;
 }
 .categories-inner__item-title {
+   max-height: 50px;
    margin-bottom: 20px;
+
    font-size: 1.6rem;
    color: $gray;
+   overflow: hidden;
 }
 
 @media (min-width: $screen-lg-min) {
@@ -412,15 +391,32 @@ input {
 
 // Btn
 .btn {
+   display: inline-block;
    padding: 7px 20px 5px;
+
    font-size: 1.1rem;
+   letter-spacing: 1px;
    text-transform: uppercase;
+
    background-color: $green;
    border-radius: $radius;
-   transition: background .1s linear;
+   transition: all .2s linear;
    &:hover {
       background-color: lighten($green, 10%);
    }
+}
+.btn-o {
+   padding: 10px 25px 8px;
+   font-size: 1.5rem;
+   background: none;
+   border: 3px solid $white;
+   &:hover, &:active {
+      color: $primary;
+      background: $white;
+   }
+}
+.btn--white-text {
+   color: $white;
 }
 
 // Section
@@ -495,11 +491,6 @@ input {
    white-space: nowrap;
    text-overflow: ellipsis;
 }
-.products-item__buy {
-   .btn {
-      color: $white;
-   }
-}
 .products-item__buy-price {
    margin-right: 15px;
 }
@@ -549,36 +540,48 @@ input {
    justify-content: space-between;
    color: $white;
 }
+.footer-inner__col {
+   max-width: 20%;
+   white-space: nowrap;
+}
 .footer-inner__col-title {
    margin-bottom: 25px;
-
+   
    letter-spacing: 1px;
    font-size: 1.5rem;
    text-transform: uppercase;
+   
+   text-overflow: ellipsis;
+   overflow: hidden;
 }
 .footer-inner__col-link {
    margin-bottom: 15px;
    display: block;
-
+   
    @include secondary-font;
    font-size: 0.9rem;
    transition: color .1s;
+   text-overflow: ellipsis;
+   overflow: hidden;
    &:hover {
       color: rgba($white, .5);
    }
 }
+
 
 @media (max-width: $screen-md-max) {
    .footer {
       padding: 40px 10px 90px;
    }   
    .footer-inner {
+      width: 100%;
       align-items: center;
       flex-direction: column;
    }   
    .footer-inner__col {
       margin-bottom: 20px;
       width: 60%;
+      max-width: 100%;
       background-color: rgba(#fff, .1);
       border: 1px solid $white;
    }
@@ -607,12 +610,11 @@ input {
    }
 }
 
-@media (max-width: $screen-md-max) {
+@media (max-width: $screen-xs-max)  {
    .footer-inner__col {
       width: 100%;
    }
 }
-
 
 
 
