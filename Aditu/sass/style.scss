@@ -75,6 +75,8 @@ input {
    background: url("../img/header/search.png") no-repeat;
 }
 .basket {
+   display: flex;
+   align-items: flex-end;
    font-size: 2rem;
    color: $dark-gray;
 }
