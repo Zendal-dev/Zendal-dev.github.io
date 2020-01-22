@@ -208,7 +208,7 @@ a {
   padding: 30px;
   width: 21px;
   height: 21px;
-  background: url(../../images/search.png) no-repeat center;
+  background: url("../images/search.png") no-repeat center;
   position: relative;
 }
 
@@ -246,7 +246,7 @@ a {
 .intro {
   margin-top: 300px;
   height: 100vh;
-  background: #fff url("../../images/intro-bg.jpg") no-repeat center/cover;
+  background: #fff url("../images/intro-bg.jpg") no-repeat center/cover;
 }
 
 .intro-inner {
@@ -434,7 +434,7 @@ a {
 
 .examples {
   padding-top: 50px;
-  background: url("../../images/examples/snowflake-1.jpg") no-repeat 30px -90px, url("../../images/examples/snowflake-2.png") no-repeat bottom -180px right -20px;
+  background: url("../images/examples/snowflake-1.jpg") no-repeat 30px -90px, url("../images/examples/snowflake-2.png") no-repeat bottom -180px right -20px;
 }
 
 .examples-block {
@@ -539,7 +539,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: url("../../images/reviews/snowflake.png") no-repeat top left;
+  background: url("../images/reviews/snowflake.png") no-repeat top left;
 }
 
 .reviews-inner__photo img {
@@ -628,7 +628,7 @@ a {
 .footer {
   padding: 130px 20px 0;
   min-height: 700px;
-  background: #fff url("../../images/footer-bg.jpg") no-repeat center/cover;
+  background: #fff url("../images/footer-bg.jpg") no-repeat center/cover;
   text-align: center;
 }
 
