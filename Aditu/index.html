@@ -6,6 +6,7 @@
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>Abitu</title>
    <link rel="stylesheet" href="css/reset.css">
+   <link rel="stylesheet" href="css/slick.css">
    <link rel="stylesheet" href="css/style.css">
    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Open+Sans&display=swap" rel="stylesheet">
 </head>
@@ -85,37 +86,39 @@
 <!-- === CATEGORIES === -->
 <div class="categories">
    <div class="container">
-      <div class="categories-inner">
-         <div class="categories-inner__item">
-            <div class="categories-inner__item-img">
+      <div class="categories-slider">
+         <button class="slick-arrow slick-prev"></button>
+         <div class="categories-slider__item">
+            <div class="categories-slider__item-img">
                <img src="img/categories/img-1.png" alt="">
             </div>
-            <div class="categories-inner__item-content">
-               <h3 class="categories-inner__item-title">Branded shoes</h3>
+            <div class="categories-slider__item-content">
+               <h3 class="categories-slider__item-title">Branded shoes</h3>
                <a class="btn" href="#">Shop</a>
             </div>
          </div>
          <!-- /.categories-inner__item -->
-         <div class="categories-inner__item">
-            <div class="categories-inner__item-img">
+         <div class="categories-slider__item">
+            <div class="categories-slider__item-img">
                <img src="img/categories/img-2.png" alt="">
             </div>
-            <div class="categories-inner__item-content">
-               <h3 class="categories-inner__item-title">Branded tshirts</h3>
+            <div class="categories-slider__item-content">
+               <h3 class="categories-slider__item-title">Branded tshirts</h3>
                <a class="btn" href="#">Shop</a>
             </div>
          </div>
          <!-- /.categories-inner__item -->
-         <div class="categories-inner__item">
-            <div class="categories-inner__item-img">
+         <div class="categories-slider__item">
+            <div class="categories-slider__item-img">
                <img src="img/categories/img-3.png" alt="">
             </div>
-            <div class="categories-inner__item-content">
-               <h3 class="categories-inner__item-title">Branded shoes</h3>
+            <div class="categories-slider__item-content">
+               <h3 class="categories-slider__item-title">Branded shoes</h3>
                <a class="btn" href="#">Shop</a>
             </div>
          </div>
          <!-- /.categories-inner__item -->
+         <button class="slick-arrow slick-next"></button>
       </div>
       <!-- /.categories-inner -->
    </div>
@@ -277,5 +280,8 @@
 </footer>
 <!-- /.footer -->
 
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
