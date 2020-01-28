@@ -1,10 +1,13 @@
 $(function(){
 
    $('.categories-slider').slick({
+      infinite: true,
       slidesToShow: 3,
       slidesToScroll: 1,
-      centerMode: false,
-      autoplaySpeed: 2000
+      // autoplay: true,
+      // autoplaySpeed: 2000,
+      easing: 'linear',
+      speed: 1000
    });
   
 });

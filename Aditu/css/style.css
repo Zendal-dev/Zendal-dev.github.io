@@ -368,23 +368,11 @@ input {
 
 /* === CATEGORIES === */
 .categories-slider {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   position: relative;
 }
 
-.categories-slider__item {
+.categories-slider__item.slick-slide {
   padding: 30px 20px;
-  max-width: 330px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -394,13 +382,7 @@ input {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-preferred-size: 33%;
-      flex-basis: 33%;
   border-right: 1px solid rgba(175, 175, 175, 0.3);
-}
-
-.categories-slider__item:last-child {
-  border: none;
 }
 
 .categories-slider__item-img {
@@ -433,14 +415,25 @@ input {
   overflow: hidden;
 }
 
-.slick-initialized .slick-slide {
-  width: 33%;
+.slick-list {
+  overflow: hidden;
+}
+
+.categories-slider .slick-track {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.slick-arrow {
+.categories-slider .slick-arrow {
   width: 50px;
   height: 50px;
   border: 1px solid #dbdbdb;
@@ -451,14 +444,14 @@ input {
   top: 50%;
 }
 
-.slick-prev {
-  left: -50px;
+.categories-slider .slick-prev {
+  left: -116px;
   -webkit-transform: translateY(-50%) rotate(135deg);
           transform: translateY(-50%) rotate(135deg);
 }
 
-.slick-next {
-  right: -50px;
+.categories-slider .slick-next {
+  right: -116px;
   -webkit-transform: translateY(-50%) rotate(-45deg);
           transform: translateY(-50%) rotate(-45deg);
 }
@@ -489,16 +482,12 @@ input {
   .categories-slider__item:last-child {
     display: none;
   }
-  .categories-slider__item:nth-child(2) {
-    border-right: none;
-  }
 }
 
 @media (max-width: 479px) {
   .categories-slider__item {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
-    border-right: none;
   }
   .categories-slider__item:nth-child(2) {
     display: none;
