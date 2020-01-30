@@ -309,10 +309,12 @@ input {
 
 /* === CATEGORIES === */
 .categories-slider {
+   min-width: 0;
+   max-width: 100%;
    position: relative;
 }
 .categories-slider__item.slick-slide {
-   padding: 30px 20px;
+   padding: 35px 20px;
    display: flex;
    align-items: center;
    justify-content: center;
@@ -343,12 +345,12 @@ input {
    color: $gray;
    overflow: hidden;
 }
-.slick-list {
+.categories-slider .slick-list {
    overflow: hidden;
+   padding: 1px;
 }
 .categories-slider .slick-track {
    display: flex;
-   flex-wrap: wrap;
    align-items: center;
    justify-content: center;
 }
@@ -365,13 +367,50 @@ input {
    top: 50%;
 }
 .categories-slider .slick-prev {
-   left: -116px;
+   left: -50px;
    transform: translateY(-50%) rotate(135deg);
 }
 .categories-slider .slick-next {
-   right: -116px;
+   right: -50px;
    transform: translateY(-50%) rotate(-45deg);
 }
+.slick-dots {
+   display: flex;
+   position: absolute;
+   justify-content: center;
+   left: 0;
+   right: 0;
+   bottom: 10px;
+   list-style: none;
+}
+.slick-dots li {
+   margin: 0 10px;
+   width: 7px;
+   height: 7px;
+   font-size: 0;
+   background-color: $primary;
+   border-radius: 50%;
+}
+.slick-dots li.slick-active {
+   background-color: transparent;
+   border: 1px solid $primary;
+}
+
+@media (max-width: $screen-lg-max) {
+   .categories-slider__item {
+      padding: 30p
+   }
+   .categories-slider__item-content {
+      margin-left: 20px;
+   }  
+}
+
+@media (max-width: $screen-xs-max) {
+   .categories-slider__item.slick-slide{
+      border: none;
+   }
+}
+
 
 @media (min-width: $screen-lg-min) {
    .categories-slider__item {
@@ -379,34 +418,7 @@ input {
    }
    .categories-slider__item-content {
       margin-left: 30px;
-   }   
-}
-
-@media (max-width: $screen-lg-max) {
-   .categories-slider__item {
-      padding: 30px 10px;
-   }
-   .categories-slider__item-content {
-      margin-left: 20px;
-   }  
-}
-
-@media (max-width: $screen-md-max) {
-   .categories-slider__item {
-      flex-basis: 50%;
-      &:last-child {
-         display: none;
-      }
-   }
-}
-
-@media (max-width: $screen-xs-max) {
-   .categories-slider__item {
-      flex-basis: 100%;
-      &:nth-child(2) {
-         display: none;
-      }
-   }
+   } 
 }
 
 
@@ -530,7 +542,7 @@ input {
 }
 
 @media (max-width: $screen-xs-max) {
-   .products {
+   .products-inner {
       padding-left: 10px;
       padding-right: 10px;
    }   
