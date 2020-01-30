@@ -1,3 +1,5 @@
+/* Fonts */
+/* /Fonts */
 body {
   font-family: 'Bebas Neue', cursive;
   font-size: 17px;
@@ -167,15 +169,9 @@ input {
   transition: color .1s;
 }
 
-.nav__link:hover {
+.nav__link:hover, .nav__link:focus {
+  outline: none;
   color: #d9f4f1;
-}
-
-@media (min-width: 1024px) {
-  .nav-inner > li + li::before {
-    content: '|';
-    padding: 0 10px;
-  }
 }
 
 @media (max-width: 1023px) {
@@ -199,6 +195,13 @@ input {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav-inner > a + a::before {
+    content: '|';
+    padding: 0 10px;
   }
 }
 
