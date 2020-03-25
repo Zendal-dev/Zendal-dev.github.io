@@ -1,4 +1,4 @@
-// Import
+ // Import
 @import "variables";
 @import "mixins";
 
@@ -400,7 +400,7 @@ input {
 
 @media (max-width: $screen-lg-max) {
    .categories-slider__item {
-      padding: 30p
+      padding: 30px;
    }
    .categories-slider__item-content {
       margin-left: 20px;
