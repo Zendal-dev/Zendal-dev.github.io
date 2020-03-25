@@ -277,7 +277,7 @@ a {
 /* === INTRO === */
 .intro {
   margin-top: 110px;
-  min-height: 100vh;
+  min-height: 80vh;
   background: url("../img/intro/intro-cake-bg.png") no-repeat right -160px top/contain, url("../img/intro/strawberry-bg.png") no-repeat 40% 10%;
 }
 
@@ -346,9 +346,14 @@ a {
   background: url("../img/interface/gift-ico.png") no-repeat;
 }
 
+@media (min-width: 1199px) {
+  .intro {
+    min-height: 100vh;
+  }
+}
+
 @media (max-width: 1199px) {
   .intro {
-    height: 70vh;
     background-size: 60%, 30%;
   }
 }

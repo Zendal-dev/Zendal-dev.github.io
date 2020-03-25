@@ -174,7 +174,7 @@ a {
 /* === INTRO === */
 .intro {
    margin-top: 110px;
-   min-height: 100vh;
+   min-height: 80vh;
    background: url("../img/intro/intro-cake-bg.png") no-repeat right -160px top/contain, 
                url("../img/intro/strawberry-bg.png") no-repeat 40% 10%;
 }
@@ -227,9 +227,14 @@ a {
    }
 }
 
+@media (min-width: $mq-xl-max) {
+   .intro {
+      min-height: 100vh;
+   }   
+}
+
 @media (max-width: $mq-xl-max) {
    .intro {
-      height: 70vh;
       background-size: 60%, 30%;
    }   
 }
