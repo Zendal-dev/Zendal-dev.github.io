@@ -464,7 +464,7 @@ a {
 
 /* === CAKES === */
 .cakes {
-  padding: 100px 0;
+  padding: 50px 0;
 }
 
 .cakes__title {
@@ -573,6 +573,15 @@ a {
   }
 }
 
+@media (min-width: 1200px) {
+  .cakes-box__col > .cakes-box__item {
+    margin-bottom: 42px;
+  }
+  .cakes-box__col > .cakes-box__item:last-child {
+    margin-bottom: 0;
+  }
+}
+
 @media (max-width: 991px) {
   .cakes-box__col {
     display: block;
@@ -598,12 +607,18 @@ a {
   }
 }
 
-@media (min-width: 1200px) {
-  .cakes-box__col > .cakes-box__item {
-    margin-bottom: 42px;
+@media (max-width: 575px) {
+  .cakes {
+    padding-top: 0;
   }
-  .cakes-box__col > .cakes-box__item:last-child {
-    margin-bottom: 0;
+  .cakes__title {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 479px) {
+  .cakes {
+    padding-top: 50px;
   }
 }
 
@@ -899,7 +914,7 @@ a {
 
 .order-decor__slider .slick-list {
   overflow: hidden;
-  padding: 20px 10px;
+  padding: 20px 10px !important;
 }
 
 .order-decor__slider.slick-slider {
@@ -1114,9 +1129,6 @@ a {
             justify-content: center;
     margin: 0;
   }
-  .order-decor__slider .slick-list {
-    padding: 20px 10px;
-  }
   .order-decor__form {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1147,7 +1159,6 @@ a {
     font-size: 2.2rem;
   }
   .order-decor__slider .slick-list {
-    max-width: 300px;
     padding-left: 0;
     padding-right: 0;
   }
@@ -1161,7 +1172,14 @@ a {
     max-width: 300px;
   }
   .order-decor__slider-item {
-    min-width: 200px;
+    min-width: 170px;
+    margin: 0 40px;
+  }
+}
+
+@media (max-width: 320px) {
+  .order-decor__slider-item {
+    margin: 0 25px;
   }
 }
 
