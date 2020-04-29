@@ -4,6 +4,17 @@ $(function() {
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1,
+      responsive: [
+         {
+            breakpoint: 768,
+            settings: {
+               slidesToShow: 1,
+               slidesToScroll: 1,
+               arrows: false,
+               dots: true,
+            }
+         }
+      ]
    });
 
    $('.order-size__slider').slick({
@@ -80,14 +91,36 @@ $(function() {
    /*  /slider counter */
 });
 
+sliderCounter('.order-filling');
+sliderCounter('.order-decor');
+
+showMore();
+
 function sliderCounter(sliderBlockId) {
    let sliderBlock = document.querySelector(sliderBlockId);
    let sliderBlockliderSize = sliderBlock.querySelector('.order-slider__counter-size');
-   let sliderBlockItems = sliderBlock.querySelectorAll('.order-decor__slider-item');
+   let sliderBlockItems = sliderBlock.querySelectorAll(sliderBlockId + '__slider-item');
    
    sliderBlockliderSize.innerHTML = sliderBlockItems.length;
 }
+// нужно работать с массивомы strElems
+function showMore() {
+   let strElems = document.querySelectorAll('.reviews-slider__text');
+   let strContent = str.innerHTML;
+   let showMore = document.createElement('span');
+   let maxlength = 246;
+  
+   if (str.innerHTML.length > maxlength) {
+      str.innerHTML = str.innerHTML.slice(0, maxlength) + ' ';
+     
+     showMore.classList = 'show-more';
+     showMore.innerHTML = 'Развернуть';
+     str.appendChild(showMore);
 
-sliderCounter('.order-decor');
-
-
+     showMore.onclick = function() {
+      str.classList.toggle('active');
+      // str.innerHTML = strContent;
+    };
+   } 
+}
+ 

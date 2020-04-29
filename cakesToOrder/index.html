@@ -159,7 +159,7 @@
 <!-- === ORDER === -->
 <section class="order">
    <div class="container">
-      <div class="order-heading">
+      <div class="section-heading">
          <h2 class="section__title">Индивидуальный заказ</h2>
          <div class="section__subtitle">Соберите торт в 3 шага</div>
       </div>
@@ -170,51 +170,59 @@
                <div class="order-block__step-number">01</div>
                Выберите начинку
             </div>
-            <div class="order-slider">
-               <div class="order-filling__slider-item">
-                  <div class="order-filling__slider-img">
-                     <img src="./img/order/slider-1/img-1.jpg" alt="Шоколадный ганаш">
+            <div class="order-filling__inner">
+               <div class="order-slider">
+                  <div class="order-filling__slider-item">
+                     <div class="order-filling__slider-img">
+                        <img src="./img/order/slider-1/img-1.jpg" alt="Шоколадный ганаш">
+                     </div>
+                     <div class="order-filling__slider-content">
+                        <div class="order-filling__slider-cake-name">Шоколадный ганаш</div>
+                        <p class="order-slider__text">
+                           Ароматный шоколадный бисквит, густой шоколадный крем – самый шоколадный из всех возможных десертов!
+                        </p>
+                        <span class="order-slider__cake-price">1000 руб/кг</span>
+                        <button class="order-slider__btn btn">Выбрать</button>
+                     </div>
                   </div>
-                  <div class="order-filling__slider-content">
-                     <div class="order-filling__slider-cake-name ">Шоколадный ганаш</div>
-                     <p class="order-slider__text">
-                        Ароматный шоколадный бисквит, густой шоколадный крем – самый шоколадный из всех возможных десертов!
-                     </p>
-                     <span class="order-slider__cake-price">1000 руб/кг</span>
-                     <button class="order-slider__btn btn">Выбрать</button>
+                  <!-- /.order-slider__item -->
+                  <div class="order-filling__slider-item">
+                     <div class="order-filling__slider-img">
+                        <img src="./img/order/slider-1/img-1.jpg" alt="Шоколадный ганаш">
+                     </div>
+                     <div class="order-filling__slider-content">
+                        <div class="order-filling__slider-cake-name">Шоколадный ганаш</div>
+                        <p class="order-slider__text">
+                           Ароматный шоколадный бисквит, густой шоколадный крем – самый шоколадный из всех возможных десертов!
+                        </p>
+                        <span class="order-slider__cake-price">1000 руб/кг</span>
+                        <button class="order-slider__btn btn">Выбрать</button>
+                     </div>
                   </div>
+                  <!-- /.order-slider__item -->
+                  <div class="order-filling__slider-item">
+                     <div class="order-filling__slider-img">
+                        <img src="./img/order/slider-1/img-1.jpg" alt="Шоколадный ганаш">
+                     </div>
+                     <div class="order-filling__slider-content">
+                        <div class="order-filling__slider-cake-name">Шоколадный ганаш</div>
+                        <p class="order-slider__text">
+                           Ароматный шоколадный бисквит, густой шоколадный крем – самый шоколадный из всех возможных десертов!
+                        </p>
+                        <span class="order-slider__cake-price">1000 руб/кг</span>
+                        <button class="order-slider__btn btn">Выбрать</button>
+                     </div>
+                  </div>
+                  <!-- /.order-slider__item -->
                </div>
-               <!-- /.order-slider__item -->
-               <div class="order-filling__slider-item">
-                  <div class="order-filling__slider-img">
-                     <img src="./img/order/slider-1/img-1.jpg" alt="Шоколадный ганаш">
-                  </div>
-                  <div class="order-filling__slider-content">
-                     <div class="order-filling__slider-cake-name">Шоколадный ганаш</div>
-                     <p class="order-slider__text">
-                        Ароматный шоколадный бисквит, густой шоколадный крем – самый шоколадный из всех возможных десертов!
-                     </p>
-                     <span class="order-slider__cake-price">1000 руб/кг</span>
-                     <button class="order-slider__btn btn">Выбрать</button>
-                  </div>
+               <!-- /.order-slider -->
+               <div class="order-slider__counter">
+                  <span class="order-slider__counter-current-slide">1</span>
+                  /
+                  <span class="order-slider__counter-size"></span>
                </div>
-               <!-- /.order-slider__item -->
-               <div class="order-filling__slider-item">
-                  <div class="order-filling__slider-img">
-                     <img src="./img/order/slider-1/img-1.jpg" alt="Шоколадный ганаш">
-                  </div>
-                  <div class="order-filling__slider-content">
-                     <div class="order-filling__slider-cake-name">Шоколадный ганаш</div>
-                     <p class="order-slider__text">
-                        Ароматный шоколадный бисквит, густой шоколадный крем – самый шоколадный из всех возможных десертов!
-                     </p>
-                     <span class="order-slider__cake-price">1000 руб/кг</span>
-                     <button class="order-slider__btn btn">Выбрать</button>
-                  </div>
-               </div>
-               <!-- /.order-slider__item -->
             </div>
-            <!-- /.order-slider -->
+            <!-- /.order-filling__inner -->
          </div>
          <!-- /.order-block -->
       
@@ -321,7 +329,6 @@
                <h4 class="order-decor__title">Ваш выбор</h4>
                <form class="order-decor__form" action="">
                   <div class="order-decor__form-item">
-                     <h5 class="order-decor__form-item-caption">Начинка</h5>
                      <input class="order-decor__form-field" type="text" placeholder="Шоколадный ганаш">
                   </div>
                   <div class="order-decor__form-item order-decor__form-item--width">
@@ -352,7 +359,6 @@
    <div class="container">
       <div class="reviews__inner">
          <h2 class="section__title reviews__title">Отзывы</h2>
-
          <div class="reviews-slider">
            <div class="reviews-slider__item">
                <div class="reviews-slider__img-wrap">
@@ -365,6 +371,9 @@
                      Заказывала торт брауни на юбилей мужа.
                      Гости были в восторге! Отдельное спасибо 
                      за своевременную доставку! Теперь будем заказывать торты только у вас для наших семейных праздников:) 
+                     Заказывала торт брауни на юбилей мужа.
+                     Гости были в восторге! Отдельное спасибо 
+                     за своевременную доставку! Теперь будем заказывать торты только у вас для наших семейных праздников:)
                   </p>
                </div>
            </div>
@@ -380,6 +389,9 @@
                      Заказывала торт брауни на юбилей мужа.
                      Гости были в восторге! Отдельное спасибо 
                      за своевременную доставку! Теперь будем заказывать торты только у вас для наших семейных праздников:) 
+                     Заказывала торт брауни на юбилей мужа.
+                     Гости были в восторге! Отдельное спасибо 
+                     за своевременную доставку! Теперь будем заказывать торты только у вас для наших семейных праздников:)
                   </p>
                </div>
            </div>
@@ -415,13 +427,13 @@
             </div>
             <div class="socials">
                <a href="#" class="socials__link">
-                  <img src="./img/interface/socials/insta.png" alt="">
+                  <img width="18" height="18" src="./img/interface/socials/instagram.svg" alt="">
                </a>
                <a href="#" class="socials__link">
-                  <img src="./img/interface/socials/vkontakte.png" alt="">
+                  <img width="30" height="20" src="./img/interface/socials/vkontakte.svg" alt="">
                </a>
                <a href="#" class="socials__link">
-                  <img src="./img/interface/socials/twitter.png" alt="">
+                  <img  src="./img/interface/socials/twitter.svg" alt="">
                </a>
             </div>
          </div>
@@ -444,7 +456,7 @@
 <!-- ADVANTAGES -->
 <section class="advantages">
    <div class="container">
-      <div class="order-heading">
+      <div class="section-heading">
          <h2 class="section__title">Наши преимущества</h2>
          <div class="section__subtitle">Почему нас выбирают ?</div>
       </div>
@@ -476,6 +488,115 @@
    </div>
    <!-- /.container -->
 </section>
+
+
+<!-- HOW-TO-ORDER 
+<section class="how-to-order">
+   <div class="container">
+      <div class="how-to-order__inner">
+         <div class="how-to-order__content">
+            <h3 class="how-to-order__title">Как заказать</h3>
+            <ul>
+               <li class="how-to-order__item">
+                  <span class="how-to-order__number-item">1</span>
+                  <h4 class="how-to-order__item-heading">Срок заказа</h4>
+                  <p class="how-to-order__item-text">
+                     Размещать заказы желательно за 2-3 дня. На выходные заказы лучше размещать минимум за неделю. 
+                  </p>
+               </li>
+               <li class="how-to-order__item">
+                  <span class="how-to-order__number-item">2</span>
+                  <h4 class="how-to-order__item-heading">Доставка по городу</h4>
+                  <p class="how-to-order__item-text">
+                     Доставка в пределах города 200 рублей , при заказе на сумму более 2000  доставка бесплатно.
+                  </p>
+               </li>
+               <li class="how-to-order__item">
+                  <span class="how-to-order__number-item">3</span>
+                  <h4 class="how-to-order__item-heading">Доставка за городом</h4>
+                  <p class="how-to-order__item-text">
+                     Доставка за пределами города рассчитывается индивидуально.
+                  </p>
+               </li>
+            </ul>
+         </div>
+      </div>
+      .how-to-order__inner 
+   </div>
+    /.container 
+</section>
+ /.how-to-order -->
+
+
+<!-- CONTACTS -->
+<section class="contacts">
+   <div class="container">
+      <div class="section-heading">
+         <h2 class="section__title">Контакты</h2>
+         <div class="section__subtitle">Остались вопросы?</div>
+      </div>
+      
+      <div class="contacts__inner">
+         <form class="contacts__form" action="">
+            <p class="contacts__form-caption">Заполните форму ниже и наш кондитер свяжется с Вами</p>
+            <input class="contacts__form-field" type="text" name="username" placeholder="Ваше имя">
+            <input class="contacts__form-field" type="email" name="email" placeholder="Email адрес">
+            <textarea class="contacts__form-field contacts__form-textarea" name="userquestion" placeholder="Ваш вопрос"></textarea>
+            <button class="contacts__form-btn btn">Отправить</button>
+         </form>
+         <div class="contacts__contact-data">
+            <p>Или позвоните по телефону: <br> +7 906 899 92 96</p>   
+            <p>Наша почта: <a href="mailto:bakerybypavel@mail.ru">bakerybypavel@mail.ru</a></p>   
+            <p>Мы в соц. сетях:</p>
+            <div class="socials">
+               <a href="#" class="socials__link socials__link--big">
+                  <img width="18" height="18" src="./img/interface/socials/instagram.svg" alt="">
+               </a>
+               <a href="#" class="socials__link socials__link--big">
+                  <img width="30" height="20" src="./img/interface/socials/vkontakte.svg" alt="">
+               </a>
+            </div>
+         </div>
+      </div>
+      <!-- /.contacts__inner -->
+   </div>
+   <!-- /.container -->
+</section>
+<!-- /.contacts -->
+
+
+<!-- FOOTER -->
+<footer class="footer">
+   <div class="container">
+      <div class="footer-top">
+         <span class="footer__logo">Cakes</span>
+         <nav class="footer-nav">
+            <a href="#" class="footer-nav__link">Наши торты</a>
+            <a href="#" class="footer-nav__link">Индивидуальный заказ</a>
+            <a href="#" class="footer-nav__link">Отзывы</a>
+            <a href="#" class="footer-nav__link">О нас</a>
+            <a href="#" class="footer-nav__link">Как заказать</a>
+            <a href="#" class="footer-nav__link">Контакты</a>
+         </nav>
+      </div>
+      <!-- /.footer-top -->
+     <div class="footer-bottom">
+         <span class="copyright">&copy;  2018 Cakes</span>
+         <div class="socials">
+            <a href="#" class="socials__link">
+               <img width="18" height="18" src="./img/interface/socials/instagram.svg" alt="">
+            </a>
+            <a href="#" class="socials__link">
+               <img width="30" height="20" src="./img/interface/socials/vkontakte.svg" alt="">
+            </a>
+         </div>
+     </div>
+     <!-- /.footer-bottom -->
+   </div>
+   <!-- /.container -->
+</footer>
+
+
 
 <script src="js/components/jquery-3.4.1.min.js"></script>
 <script src="js/components/jquery-migrate-git.min.js"></script>
