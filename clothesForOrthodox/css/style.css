@@ -246,7 +246,7 @@ a {
 .intro {
   padding: 100px 0 30px;
   height: 100vh;
-  background: url("../../img/intro/intro-bg.jpg") no-repeat top right 40%/cover; }
+  background: url("../img/intro/intro-bg.jpg") no-repeat top right 40%/cover; }
   .intro__title {
     margin-bottom: 70px;
     font-size: 1.2rem;
