@@ -1,0 +1,42 @@
+.features
+   padding: 30px 0 50px
+   &-item
+      max-width: 250px
+      margin-bottom: 10px
+      text-align: center
+      &:last-child
+         transform: translateY(-10px)
+   &__icon
+      margin-bottom: 10px
+
+.features
+   .fotorama__html
+      display: flex
+      justify-content: center
+      align-items: center
+   .fotorama__nav__shaft
+      display: flex
+      justify-content: center
+   .fotorama__nav__frame--dot
+      margin: 10px
+      .fotorama__dot
+         display: inline-block
+         vertical-align: middle
+         width: 10px
+         height: 10px
+         background-color: $gray-light
+         border: none
+         border-radius: 50%
+   .fotorama__active
+      .fotorama__dot
+         background-color: $active
+
+
+@media (min-width: $mq-screen-sm-min)
+   .features
+      padding: 50px 0
+
+@media (min-width: $mq-screen-lg-min)
+   .features
+      padding: 80px 0
+

@@ -1,0 +1,120 @@
+.product
+   margin-bottom: 20px
+   &-main
+      margin-bottom: 70px
+      &__content
+         padding: 30px 0
+         text-align: center
+      &__name
+         font-size: 1.2rem
+      &__price
+         display: inline-block
+         margin: 10px 0 20px
+         font-size: 1.9rem
+      &__text
+         margin: 0 auto 30px
+         max-width: 430px
+         font-size: 1rem
+   &-counter
+      display: inline-flex
+      border: 1px solid $gray
+      border-radius: $radius
+      &__amount
+         border: 1px solid $gray
+         border-top: 0
+         border-bottom: 0
+      &__item
+         display: inline-block
+         padding: 7px 15px
+         line-height: 1
+         font-size: 1.4rem
+         cursor: pointer
+         user-select: none
+         &:active:not(.product-counter__amount)
+            outline: 2px solid $primary
+   &-btns
+      margin-top: 30px
+      &-btn
+         margin-bottom: 20px
+
+   &-tabs
+      padding: 50px 0
+      &__list
+         margin-bottom: 40px
+         display: flex
+         justify-content: space-between
+         border-bottom: 2px solid $gray-light
+      &__link
+         &.focus
+            color: $hover
+            &::before
+               opacity: 1
+         &:last-child
+            margin-right: 0
+         &::before
+            background-color: $primary
+            bottom: -2px
+      &__content
+         height: 300px
+         overflow: hidden
+      &__item
+         height: 0
+         opacity: 0
+         overflow: hidden
+         transition: opacity .6s linear
+         &.open
+            height: auto
+            opacity: 1
+         &-addition
+            margin-top: 34px
+            max-width: 510px
+         p
+            margin-bottom: 10px
+
+@media (min-width: $mq-screen-sm-min)
+   .product
+      &-main
+         &__content
+            padding: 10px 0
+            text-align: left
+         &__name
+            font-size: 1.4rem
+         &__price
+            margin: 8px 0 15px
+            line-height: 1
+         &__text
+            margin: 0 0 30px
+
+@media (min-width: $mq-screen-lg-min)
+   .product
+      &-main
+         &__content
+            padding: 90px 0 90px 50px
+         &__name
+            font-size: 2.2rem
+         &__price
+            font-size: 2.5rem
+            margin: 20px 0
+         &__text
+            font-size: 1.1rem
+      &-counter
+         margin: 30px 0 20px
+      &-tabs
+         &__list
+            padding-right: 145px
+
+@media (max-width: $mq-screen-sm-max)
+   .product
+      &-tabs
+         &__list
+            overflow-x: scroll
+            position: relative
+            &::-webkit-scrollbar
+               width: 0
+         &__link::before
+            display: none
+         &__link + &__link
+            margin-left: 30px
+
+
+

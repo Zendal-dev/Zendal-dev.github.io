@@ -1,0 +1,154 @@
+html 
+   font-size: 18px
+
+body
+   margin: 0
+   padding: 0
+   font-family: $primary-font
+   font-size: 1rem
+   color: $black
+
+*, *::before, *::after 
+   box-sizing: border-box
+
+a
+   color: inherit
+   text-decoration: none
+   &:hover
+      text-decoration: none
+      color: $hover
+
+.link
+   padding: 7px 0
+   position: relative
+   transition: color .3s ease
+   &::before 
+      content: ''
+      width: 100%
+      height: 2px
+      background-color: $hover
+      opacity: 0
+      position: absolute
+      bottom: 0
+      left: 0
+      transition: opacity .3s ease
+   &:hover 
+      &::before
+         opacity: 1
+   
+.container-custom
+   padding: 0 30px
+   max-width: 1300px
+   margin: 0 auto
+
+.btn 
+   max-width: 236px
+   padding: 15px 70px
+   background-color: $primary
+   border-radius:  $radius
+   font-size: 1.3rem
+   color: $white
+   font-weight: 800
+   white-space: pre-wrap
+   &:hover 
+      background-color: $hover
+   &:active, &:focus
+      box-shadow: none
+      background-color: $active
+   &-t
+      padding: 15px 40px
+      border: 2px solid $primary
+      background-color: transparent
+      color: $primary
+      font-size: 1rem
+      &:hover, &:focus
+         background-color: transparent
+         border-color: $hover
+         color: $hover
+
+/** burger **/
+.burger 
+   &__item
+      width: 23px
+      height: 2px
+      background-color: $black
+      position: relative
+      &::before, &::after 
+         content: ''
+         display: block
+         width: 23px
+         height: 2px
+         background-color: $black
+         position: absolute
+         top: -7px
+         left: 0
+         transition: all .2s ease
+      &::after 
+         top: 7px
+      &.active 
+         background-color: transparent
+         &::before, &::after 
+            width: 28px
+            height: 4px
+            background-color: #fff
+            top: 0
+            left: 0
+         &::before
+            transform: rotate(45deg)
+         &::after 
+            transform: rotate(-45deg)
+
+@media (min-width: $mq-screen-md-min)
+   .burger 
+      &__item
+         display: none
+
+@media (max-width: $mq-screen-md-max)
+   .burger
+      margin-left: auto
+      padding: 15px 5px
+      width: 33px
+      height: 20px
+      &__item.active
+         top: 30px
+         right: 15px
+      
+/** /burger **/
+
+/** Fotorama slider **/
+.fotorama 
+   &__img
+      display: block
+   &__nav
+      margin-top: 12px
+      &__frame 
+         margin: 0 2px
+      &__shaft
+         display: flex
+   &__thumb
+      display: inline-block !important
+      overflow: hidden
+      border-radius: $radius-lg !important
+      filter: brightness(.9)
+      &-border
+         width: 0 !important
+         border: none !important
+
+   &__active
+      .fotorama__thumb
+         filter: brightness(1.1)
+/** /Fotorama slider **/
+
+.socials
+   display: flex
+   align-items: center
+   &__svg
+      margin: 0 5px
+      max-width: 30px
+      max-height: 30px
+      fill: $gray-dark
+      transition: fill .3s
+      &:hover, &:active
+         fill: $hover
+
+
