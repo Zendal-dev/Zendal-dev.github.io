@@ -56,7 +56,10 @@ a {
   font-size: 1.3rem;
   color: #fff;
   font-weight: 800;
-  white-space: pre-wrap; }
+  white-space: pre-wrap;
+  -webkit-transition: background-color .2s linear, color .2s linear, border-color .2s linear;
+  -o-transition: background-color .2s linear, color .2s linear, border-color .2s linear;
+  transition: background-color .2s linear, color .2s linear, border-color .2s linear; }
   .btn:hover {
     background-color: #F09D1C; }
   .btn:active, .btn:focus {
@@ -211,7 +214,9 @@ a {
   .header__nav {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; } }
+    display: flex;
+    max-height: none;
+    opacity: 1; } }
 
 @media (max-width: 767.98px) {
   .header__nav.active {
