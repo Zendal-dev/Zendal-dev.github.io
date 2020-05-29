@@ -1,21 +1,5 @@
 'use strict';
 
-// // Fotorama slider
-//    const SCREEN_SMALL_SIZE = 576;
-//    const htmlEl = document.documentElement;
-//    const featuresBlock = document.querySelector('.features-slider');
-//
-//    if (htmlEl.clientWidth < SCREEN_SMALL_SIZE) {
-//       featuresBlock.classList.add('fotorama');
-//    }
-//    window.addEventListener('resize',  () => {
-//       if (htmlEl.clientWidth > SCREEN_SMALL_SIZE) {
-//          featuresBlock.classList.remove('fotorama');
-//       }
-//    });
-
-// // /Fotorama slider / попробовать сделать через mql
-
 /* Product counter */
 (function () {
    const productCounter = document.querySelector('.product-counter');
