@@ -246,7 +246,9 @@ a {
     transition: width .3s ease; }
   .header__logo {
     max-width: 115px;
-    margin-left: -15px; } }
+    margin-left: -15px; }
+  .header__phone {
+    display: none; } }
 
 .intro {
   padding: 100px 0 30px;
