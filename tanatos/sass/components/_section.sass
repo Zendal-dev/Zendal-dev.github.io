@@ -1,0 +1,25 @@
+.section
+    padding: 100px 0
+    &-header
+        text-align: center    
+        color: $black
+        &--white
+            color: $white
+        &-title
+            margin-top: 0
+            font-size: 2.105rem
+            text-transform: uppercase
+            &__word
+                color: $primary-color
+        &__description
+            max-width: 455px
+            margin: 0 auto 100px
+            line-height: 1.9
+
+@media ( max-width: $screen-sm-max )
+    .section
+        padding: 60px 0
+        &-header
+            &__description
+                margin-bottom: 50px
+    
