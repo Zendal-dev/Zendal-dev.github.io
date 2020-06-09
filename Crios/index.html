@@ -9,17 +9,28 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-sdfdsf
+
 <!-- === Header === -->
 <header class="header">
 	<div class="container">
 		<div class="header-inner">
-			<div class="header-menu">
-				<span class="header-menu__item"></span>
+			<div class="header-burger">
+				<span class="header-burger__item"></span>
 			</div>
+			<nav class="header-nav">
+				<a href="#" class="header-nav__link">About</a>
+				<a href="#" class="header-nav__link">Blog</a>
+				<a href="#" class="header-nav__link">Contacts</a>
+				<a href="#" class="header-nav__link">Gallery</a>
+			</nav>
 			<!-- /.header-menu -->
 			<span class="header__logo">Crios</span>
-			<div class="header-search"></div>
+			<div class="header-search-wrap">
+				<div class="header-search"></div>
+				<div class="header-search__field">
+					<input type="text">
+				</div>
+			</div>
 		</div>
 		<!-- /.header-inner -->
 	</div>
@@ -195,5 +206,7 @@ sdfdsf
 	<a class="footer__btn btn" href="#">Symu.co/freebies</a>
 </footer>
 
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

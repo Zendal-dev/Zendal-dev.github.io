@@ -3,31 +3,32 @@
    display: flex;
    align-items: center;
    justify-content: space-between;
+   position: relative;
 }
 
-.header-menu {
+.header-burger {
    padding: 20px;
    box-shadow: $shadow;
    border-radius: 50%;
    background-color: #fff;
    transition: background .2s;
 
-   &:hover {
-      .header-menu__item {
+   &.active {
+      .header-burger__item {
          background: none;
       }
 
-      .header-menu__item::before {
-         transform: rotate(-45deg);
+      .header-burger__item::before {
+         transform: rotate(45deg);
       }
 
-      .header-menu__item::after {
-         transform: rotate(45deg);
+      .header-burger__item::after {
+         transform: rotate(-45deg);
       }
    }
 }
 
-.header-menu__item {
+.header-burger__item {
    position: relative;
    display: inline-block;
    width: 18px;
@@ -51,6 +52,34 @@
 
    &::after {
       transform: translateY(5px);
+   }
+}
+
+.header-nav {
+   padding: 20px 40px;
+   position: absolute;
+   top: 100px;
+   left: 70px;
+   z-index: 1000;
+
+   background-color: #fff;
+   border-radius: $radius;
+   box-shadow: $shadow;
+   text-transform: uppercase;
+}
+
+.header-nav__link {
+   display: block;
+   font-size: 1.1rem;
+   color: $black;
+   transition: color .2s ease;
+   
+   & + & {
+      margin-top: 20px;
+   }
+   
+   &:hover {
+      color: $primary
    }
 }
 
@@ -80,6 +109,10 @@
    }
 }
 
+.header-search-wrap {
+   position: relative;
+}
+
 .header-search {
    padding: 30px;
    width: 21px;
@@ -87,8 +120,18 @@
    background: url("../images/search.png") no-repeat center;
    position: relative;
 
+   &.active {
+      &::before {
+         height: 50px;
+         border: 1px solid $primary;
+         border-left: none;
+         border-radius: 0 $radius $radius 0;
+         background-color: #fff;
+      }
+   }
+
    &::before {
-      content: '';
+      content: "";
       display: block;
       width: 60px;
       height: 60px;
@@ -104,10 +147,33 @@
       z-index: -1;
    }
 
-   &:hover {
+   &:not(&.active):hover {
       &::before {
          width: 57px;
          height: 57px;
+      }
+   }
+}
+
+.header-search__field {
+   position: absolute;
+   top: 50%;
+   left: 10%;
+   transform: translateY(-50%);
+
+   input {
+      height: 50px;
+      padding: 15px;
+
+      border: 1px solid $primary;
+      border-right: none;
+      border-radius: $radius 0 0 $radius;
+      box-shadow: $shadow;
+      transition: border-color .1s ease;
+
+      &:focus {
+         outline: none;
+         border-color: $primary;
       }
    }
 }

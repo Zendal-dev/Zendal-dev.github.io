@@ -4,7 +4,6 @@
     <list default="true" id="39cdbf95-fe9f-41ee-ab82-e125c8fde69c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../Eudora/sass/blocks/_offer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../Eudora/sass/blocks/_offer.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Eudora/sass/components/_section.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../Eudora/sass/components/_section.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +41,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1591210828469</updated>
-      <workItem from="1591210829837" duration="7434000" />
+      <workItem from="1591210829837" duration="7649000" />
     </task>
     <servers />
   </component>

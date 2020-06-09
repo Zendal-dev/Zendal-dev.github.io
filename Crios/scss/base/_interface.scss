@@ -1,7 +1,7 @@
 body {
    font-size: 14px;
-   @include regular;
    color: $black;
+   @include regular;
 }
 
 *, *::before, *::after {

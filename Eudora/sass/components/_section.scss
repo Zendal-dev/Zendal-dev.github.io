@@ -1,5 +1,8 @@
 .section {
     padding: 120px 0;
+    &.types {
+        padding: 120px 0 0 0;
+    }
     &-header {
         text-align: center;
 
