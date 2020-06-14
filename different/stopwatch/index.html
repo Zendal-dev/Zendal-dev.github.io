@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Timer</title>
+   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+   <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="msg">Not finished</div>
+
+<div class="stopwatch">
+   <div id="display" class="stopwatch-display">0</div>
+
+   <button id="reset" class="stopwatch__btn stopwatch__btn--focus">
+      <i class="fas fa-sync-alt"></i>
+   </button>
+   <button id="round" class="stopwatch__btn stopwatch__btn--focus">
+      <i class="fas fa-circle-notch"></i>
+   </button>
+   <button id="pause" class="stopwatch__btn">
+      <i class="fas fa-pause"></i>
+   </button>
+   <button id="start" class="stopwatch__btn">
+      <i class="fas fa-play"></i>
+   </button>
+
+   <div class="stopwatch-round-display">
+      <div class="stopwatch-round-display__header">
+         <span>Round</span>
+         <span>Time</span>
+      </div>
+      <div id="round-display"></div>
+   </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
