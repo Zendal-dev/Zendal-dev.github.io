@@ -4,7 +4,6 @@
    --primary: #FF9500;
    --hover: #d47c00;
 }
-
 /* Default styles
  ============================== */
 body {
@@ -12,24 +11,22 @@ body {
    justify-content: center;
    align-items: center;
    flex-direction: column;
-   
+
    min-height: 100vh;
    background-color: #000;
    color: #fff;
    font: 16px 'Inconsolata', monospace;
 }
-
 *, *::before, *::after {
    margin: 0;
    box-sizing: border-box;
 }
-
 button {
    border: none;
    background: none;
 }button:focus {
     outline: none;
-}
+ }
 
 /*
 ===================================== */
@@ -42,11 +39,15 @@ button {
 .stopwatch-display {
    margin-bottom: 20px;
    padding: 10px;
+   user-select: none;
 
    font-size: 4rem;
    line-height: 1.1;
    text-align: center;
    color: var(--primary);
+}
+.stopwatch__milliseconds {
+   font-size: .5rem;
 }
 .stopwatch__btn {
    padding: 10px 20px;
@@ -57,12 +58,12 @@ button {
    font-family: inherit;
    font-size: 1.1rem;
    color: #fff;
- }
+}
 .stopwatch__btn:active,
 .stopwatch__btn:not(.stopwatch__btn--focus):focus,
 .stopwatch__btn:hover{
    background-color: var(--hover);
- }
+}
 .stopwatch-round-display {
    min-height: 50px;
    margin-top: 20px;
@@ -72,15 +73,13 @@ button {
    display: none;
    justify-content: space-between;
    padding: 7px 20px;
-
    border-bottom: 1px solid #fff;
-
 }
 .stopwatch-round-display__header.show {
    display: flex;
 }
 .round-display__row {
-   padding: 7px 20px;
+   padding: 7px 20px 7px 30px;
    display: flex;
    justify-content: space-between;
    border-bottom: 1px solid #fff;
@@ -88,13 +87,6 @@ button {
 .round-display__row:last-child {
    border-bottom: none
 }
-
 /* /Stopwatch
 ===================================== */
-
-.msg {
-   position: absolute;
-   top: 10px;
-   left: 10px;
-}
 

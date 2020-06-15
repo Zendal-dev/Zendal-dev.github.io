@@ -14,9 +14,12 @@ class Stopwatch {
       this.started = false;
       this.timeHasPassed = null;
       this.interval = null;
-      this.delta = null;
+      this.formatted = null;
+      this.ms = 0;
+      this.s = 0;
+      this.m = 0;
+      this.h = 0;
 
-      // this.roundDelta = null;
       this.roundCount = 0;
 
       this.startBtn.addEventListener('click', () => this.start());
@@ -31,9 +34,19 @@ class Stopwatch {
       if (!this.started) {
          this.interval = setInterval(() => {
             const currentTime = Date.now();
-            this.delta = (currentTime + this.timeHasPassed) - startTime;
 
-            this.display.textContent = this.delta;
+            this.ms = ((currentTime + this.timeHasPassed) - startTime);
+            this.s = Math.floor(this.ms / 1000) % 60;
+            this.m = Math.floor(this.s / 60) % 60;
+            this.h = Math.floor(this.m / 60) % 60;
+
+            this.formatted = [
+               this.h.toString().padStart(2, '0'),
+               this.m.toString().padStart(2, '0'),
+               this.s.toString().padStart(2, '0'),
+            ].join(':');
+
+            this.display.textContent = this.formatted;
          });
       }
 
@@ -42,7 +55,7 @@ class Stopwatch {
 
    pause() {
       clearInterval(this.interval);
-      this.timeHasPassed = this.delta;
+      this.timeHasPassed = this.ms;
       this.started = false;
    }
 
@@ -50,27 +63,31 @@ class Stopwatch {
       clearInterval(this.interval);
       this.roundDisplayHeader.classList.remove('show');
       this.roundDisplay.innerHTML = '';
-      this.display.textContent = 0;
+      this.roundCount = 0;
+      this.display.textContent = '00:00:00';
       this.timeHasPassed = 0;
       this.started = false;
    }
 
    round() {
-      // this.roundDelta = this.delta;
       this.roundCount++;
-
       this.roundDisplayHeader.classList.add('show');
 
-      const round = document.createElement('div');
-      round.classList.add('round-display__row');
-      round.insertAdjacentHTML('beforeend', `
-        <span>${this.roundCount}</span>
-        <span>${this.delta}</span>
+      this.roundDisplay.insertAdjacentHTML('afterbegin', `
+        <div class="round-display__row">
+           <span>${this.roundCount}</span>
+           <span>${this.formatted}</span>
+        </div>
       `);
-      this.roundDisplay.append(round);
    }
 } // /Stopwatch
 
-const timer = new Stopwatch();
+const stopwatch = new Stopwatch();
+
+
+
+
+
+
 
 
