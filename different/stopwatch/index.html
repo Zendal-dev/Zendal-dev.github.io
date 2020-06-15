@@ -10,27 +10,33 @@
 <body>
 
 <div class="stopwatch">
-   <div id="display" class="stopwatch-display">00:00:00</div>
+   <div class="stopwatch-panel">
+      <div id="display" class="stopwatch-display">00:00:00</div>
 
-   <button id="reset" class="stopwatch__btn stopwatch__btn--focus">
-      <i class="fas fa-sync-alt"></i>
-   </button>
-   <button id="round" class="stopwatch__btn stopwatch__btn--focus">
-      <i class="fas fa-circle-notch"></i>
-   </button>
-   <button id="pause" class="stopwatch__btn">
-      <i class="fas fa-pause"></i>
-   </button>
-   <button id="start" class="stopwatch__btn">
-      <i class="fas fa-play"></i>
-   </button>
-
-   <div class="stopwatch-round-display">
-      <div class="stopwatch-round-display__header">
-         <span>Round</span>
-         <span>Time</span>
+      <div class="stopwatch-controls">
+         <button id="reset" class="stopwatch__btn stopwatch__btn--focus">
+            <i class="fas fa-sync-alt"></i>
+         </button>
+         <button id="round" class="stopwatch__btn stopwatch__btn--focus">
+            <i class="fas fa-circle-notch"></i>
+         </button>
+         <button id="pause" class="stopwatch__btn">
+            <i class="fas fa-pause"></i>
+         </button>
+         <button id="start" class="stopwatch__btn">
+            <i class="fas fa-play"></i>
+         </button>
       </div>
-      <div id="round-display"></div>
+   </div>
+
+   <div class="stopwatch-rounds">
+      <div class="stopwatch-round-display">
+         <div class="stopwatch-round-display__header">
+            <span>Round</span>
+            <span>Time</span>
+         </div>
+         <div id="round-display"></div>
+      </div>
    </div>
 </div>
 

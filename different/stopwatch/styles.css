@@ -2,16 +2,10 @@
  ============================== */
 :root {
    --primary: #FF9500;
-   --hover: #d47c00;
 }
 /* Default styles
  ============================== */
 body {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-
    min-height: 100vh;
    background-color: #000;
    color: #fff;
@@ -34,7 +28,18 @@ button {
 /* Stopwatch
 ===================================== */
 .stopwatch {
-   color: #fff;
+   padding: 20px;
+   min-height: 100vh;
+}
+.stopwatch-panel {
+   padding-top: 20%;
+   text-align: center;
+}
+.stopwatch-rounds {
+   height: 50%;
+}
+.stopwatch-controls {
+   text-align: center;
 }
 .stopwatch-display {
    margin-bottom: 20px;
@@ -50,24 +55,29 @@ button {
    font-size: .5rem;
 }
 .stopwatch__btn {
-   padding: 10px 20px;
-   transition: background-color .2s linear;
+   padding: 15px 20px;
+   transition: all .2s ease;
 
    border-radius: 10px;
    background-color: var(--primary);
+   box-shadow: 0 3px 0 #ad6600;
+
    font-family: inherit;
-   font-size: 1.1rem;
+   font-size: 1.3rem;
    color: #fff;
 }
 .stopwatch__btn:active,
-.stopwatch__btn:not(.stopwatch__btn--focus):focus,
-.stopwatch__btn:hover{
-   background-color: var(--hover);
+.stopwatch__btn:not(.stopwatch__btn--focus):focus {
+   box-shadow: none;
+   transform: translateY(3px);
 }
 .stopwatch-round-display {
-   min-height: 50px;
-   margin-top: 20px;
+   max-width: 350px;
+   min-height: 100px;
+   margin: 20px auto 0;
+
    color: inherit;
+   overflow-y: hidden;
 }
 .stopwatch-round-display__header {
    display: none;

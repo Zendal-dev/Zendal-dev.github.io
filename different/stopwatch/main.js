@@ -70,6 +70,8 @@ class Stopwatch {
    }
 
    round() {
+      if (!this.started) return false;
+
       this.roundCount++;
       this.roundDisplayHeader.classList.add('show');
 
