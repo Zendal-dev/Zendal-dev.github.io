@@ -15,11 +15,12 @@ class Stopwatch {
       this.timeHasPassed = null;
       this.interval = null;
       this.formatted = null;
+
+      this.timestamp = 0;
       this.ms = 0;
       this.s = 0;
       this.m = 0;
       this.h = 0;
-
       this.roundCount = 0;
 
       this.startBtn.addEventListener('click', () => this.start());
@@ -35,8 +36,10 @@ class Stopwatch {
          this.interval = setInterval(() => {
             const currentTime = Date.now();
 
-            this.ms = ((currentTime + this.timeHasPassed) - startTime);
-            this.s = Math.floor(this.ms / 1000) % 60;
+            this.timestamp = ((currentTime + this.timeHasPassed) - startTime);
+
+            this.ms = Math.floor((this.timestamp % 1000) / 10);
+            this.s = Math.floor(this.timestamp / 1000) % 60;
             this.m = Math.floor(this.s / 60) % 60;
             this.h = Math.floor(this.m / 60) % 60;
 
@@ -44,6 +47,7 @@ class Stopwatch {
                this.h.toString().padStart(2, '0'),
                this.m.toString().padStart(2, '0'),
                this.s.toString().padStart(2, '0'),
+               this.ms.toString().padStart(2, '0')
             ].join(':');
 
             this.display.textContent = this.formatted;
@@ -55,7 +59,7 @@ class Stopwatch {
 
    pause() {
       clearInterval(this.interval);
-      this.timeHasPassed = this.ms;
+      this.timeHasPassed = this.timestamp;
       this.started = false;
    }
 
@@ -64,7 +68,7 @@ class Stopwatch {
       this.roundDisplayHeader.classList.remove('show');
       this.roundDisplay.innerHTML = '';
       this.roundCount = 0;
-      this.display.textContent = '00:00:00';
+      this.display.textContent = '00:00:00:00';
       this.timeHasPassed = 0;
       this.started = false;
    }
