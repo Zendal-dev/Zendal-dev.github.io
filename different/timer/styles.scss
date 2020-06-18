@@ -1,0 +1,90 @@
+/* Variables
+ ============================== */
+ :root {
+   --primary: #FF9500;
+}
+/* Default styles
+ ============================== */
+body {
+   min-height: 100vh;
+   background-color: #000;
+   color: #fff;
+   font: 16px 'Inconsolata', monospace;
+}
+*, *::before, *::after {
+   margin: 0;
+   box-sizing: border-box;
+}
+button {
+   border: none;
+   background: none;
+   &:focus {
+      outline: none;
+   }
+}
+/*
+===================================== */
+
+/* Timer
+===================================== */
+.timer {
+   padding: 20px;
+   min-height: 100vh;
+   &-panel {
+      padding-top: 20%;
+      text-align: center;
+   }
+   &-controls {
+      margin-bottom: 50px;
+      text-align: center;
+   }
+   &-display {
+      margin-bottom: 20px;
+      padding: 10px;
+      user-select: none;
+   
+      font-size: 4rem;
+      line-height: 1.1;
+      text-align: center;
+      color: var(--primary);
+   }
+   &__milliseconds {
+      font-size: 0.5rem;
+   }
+   &__btn {
+      padding: 15px 20px;
+      transition: all .2s ease;
+   
+      border-radius: 10px;
+      background-color: var(--primary);
+      box-shadow: 0 3px 0 #ad6600;
+   
+      font-family: inherit;
+      font-size: 1.3rem;
+      color: #fff;
+      &:active,
+      &:not(.timer__btn--focus):focus {
+         box-shadow: none;
+         transform: translateY(3px);
+      }
+   }
+   &-setting {
+      display: flex;
+      justify-content: center;
+      &__row {
+         margin: 0 10px;
+      }
+      &__label {
+         display: block;
+         margin-bottom: 10px;
+      }
+      &__select {
+         width: 100px;
+         height: 40px;
+         padding: 10px;
+      }
+   }
+}
+/* /Timer
+===================================== */
+

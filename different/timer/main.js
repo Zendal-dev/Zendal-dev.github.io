@@ -1,0 +1,101 @@
+'use strict';
+
+class Timer {
+   constructor() {
+      this.display = document.querySelector('#display');
+      this.resetBtn = document.querySelector('#reset');
+      this.pauseBtn = document.querySelector('#pause');
+      this.startBtn = document.querySelector('#start');
+      this.hoursSelect = document.querySelector('#edt-hour');
+      this.minutesSelect = document.querySelector('#edt-min');
+      this.secondSelect = document.querySelector('#edt-sec');
+
+      this.started = false;
+      this.timeHasPassed = null;
+      this.interval = null;
+      this.timeout = null;
+     
+      this.totalTime = 0;
+      this.s = 0;
+      this.m = 0;
+      this.h = 0;
+
+      this.startBtn.addEventListener('click', () => this.start());
+      this.pauseBtn.addEventListener('click', () => this.pause());
+      this.resetBtn.addEventListener('click', () => this.reset());
+   }
+
+   convertionToMillisecond(hours, minutes, seconds) {
+      const hoursInMs = +hours * 60 * 60 * 1000, 
+            minutesInMs = +minutes * 60 * 1000, 
+            secondsInMs = +seconds * 1000;
+
+      return hoursInMs + minutesInMs + secondsInMs;
+   }   
+
+   formattingTime(startTime) {
+      this.delta = ((Date.now() + this.timeHasPassed) - startTime);
+      
+      this.s = Math.floor( ((this.totalTime - this.delta) / 1000) % 60);
+      this.m = Math.floor( ((this.totalTime - this.delta) / (1000 * 60)) % 60);
+      this.h = Math.floor( ((this.totalTime - this.delta) / (1000 * 60 * 60)) % 24);
+
+      const formatted = [
+         this.h.toString().padStart(2, '0'),
+         this.m.toString().padStart(2, '0'),
+         this.s.toString().padStart(2, '0'),
+      ].join(':');
+
+      return formatted;
+   }
+
+   clearPlanning() {
+      clearInterval(this.interval);
+      clearTimeout(this.timeout);
+   }
+
+   start() {
+      const startTime = Date.now();
+
+      this.totalTime = this.convertionToMillisecond(
+         this.hoursSelect.value,
+         this.minutesSelect.value, 
+         this.secondSelect.value
+      );      
+
+      if (!this.started && this.totalTime > 0) {
+         this.interval = setInterval(() => {
+            this.display.textContent = this.formattingTime(startTime);
+         });
+
+         this.timeout = setTimeout(() => {
+            this.clearPlanning();
+         }, this.totalTime);
+      }
+
+      this.started = true;
+   } // start()
+
+   pause() {
+      this.clearPlanning();
+      this.timeHasPassed = this.delta;
+      this.started = false;
+   }
+
+   reset() {
+      this.clearPlanning();
+      this.display.textContent = '00:00:00';
+      this.started = false;
+   }
+
+} // Timer
+
+const timer = new Timer();
+
+
+
+
+
+
+
+
