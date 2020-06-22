@@ -15,7 +15,8 @@ class Timer {
       this.timeHasPassed = null;
       this.interval = null;
       this.timeout = null;
-     
+      
+      this.delta = 0;
       this.totalTime = 0;
       this.s = 0;
       this.m = 0;
@@ -80,12 +81,16 @@ class Timer {
    }
 
    pause() {
+      if (this.started == false) return;
+      
       this.clearPlanning();
       this.timeHasPassed = this.delta;
       this.started = false;
    }
 
    reset() {
+      if (this.started == false) return;
+
       this.clearPlanning();
       this.timerSelects.forEach(select => select.disabled = false);
       this.display.textContent = '00:00:00';
