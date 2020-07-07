@@ -74,6 +74,7 @@ taskEditorArea.addEventListener('input', function (event) {
       addTaskBtn.classList.remove('task-editor__add-btn--disabled');
    } else addTaskBtn.classList.add('task-editor__add-btn--disabled');
 
+   // auto resize area
    this.style.height = 'auto';
    this.style.height = '' + this.scrollHeight + 'px';
 });

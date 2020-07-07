@@ -4,12 +4,11 @@ class Stopwatch {
    constructor() {
       this.display = document.querySelector('#display');
       this.roundDisplay = document.querySelector('#round-display');
+      this.roundDisplayHeader = document.querySelector('.stopwatch-round-display__header');
       this.resetBtn = document.querySelector('#reset');
       this.roundBtn = document.querySelector('#round');
       this.pauseBtn = document.querySelector('#pause');
       this.startBtn = document.querySelector('#start');
-
-      this.roundDisplayHeader = document.querySelector('.stopwatch-round-display__header');
 
       this.started = false;
       this.timeHasPassed = null;

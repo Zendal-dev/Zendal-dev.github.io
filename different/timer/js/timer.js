@@ -6,6 +6,7 @@ class Timer {
       this.resetBtn = document.querySelector('#reset');
       this.pauseBtn = document.querySelector('#pause');
       this.startBtn = document.querySelector('#start');
+      
       this.timerSelects = document.querySelectorAll('.timer-setting__select');
       this.hoursSelect = document.querySelector('#edt-hour');
       this.minutesSelect = document.querySelector('#edt-min');
@@ -27,7 +28,7 @@ class Timer {
       this.resetBtn.addEventListener('click', () => this.reset());
    }
 
-   convertionToMillisecond(hours, minutes, seconds) {
+   getConvertionToMillisecond(hours, minutes, seconds) {
       const hoursInMs = +hours * 60 * 60 * 1000, 
             minutesInMs = +minutes * 60 * 1000, 
             secondsInMs = +seconds * 1000;
@@ -42,13 +43,13 @@ class Timer {
       this.m = Math.floor( ((this.totalTime - this.delta) / (1000 * 60)) % 60);
       this.h = Math.floor( ((this.totalTime - this.delta) / (1000 * 60 * 60)) % 24);
 
-      const formatted = [
+      const formattedTime = [
          this.h.toString().padStart(2, '0'),
          this.m.toString().padStart(2, '0'),
          this.s.toString().padStart(2, '0'),
       ].join(':');
 
-      return formatted;
+      return formattedTime;
    }
 
    clearPlanning() {
@@ -59,7 +60,7 @@ class Timer {
    start() {
       const startTime = Date.now();
 
-      this.totalTime = this.convertionToMillisecond(
+      this.totalTime = this.getConvertionToMillisecond(
          this.hoursSelect.value,
          this.minutesSelect.value, 
          this.secondSelect.value

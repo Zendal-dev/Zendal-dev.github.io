@@ -1,8 +1,7 @@
 /* Variables
  ============================== */
- :root {
-   --primary: #FF9500;
-}
+ $primary: #FF9500;
+
 /* Default styles
  ============================== */
 body {
@@ -46,7 +45,7 @@ button {
       font-size: 4rem;
       line-height: 1.1;
       text-align: center;
-      color: var(--primary);
+      color: $primary;
    }
    &__milliseconds {
       font-size: 0.5rem;
@@ -56,7 +55,7 @@ button {
       transition: all .2s ease;
    
       border-radius: 10px;
-      background-color: var(--primary);
+      background-color: $primary;
       box-shadow: 0 3px 0 #ad6600;
    
       font-family: inherit;
