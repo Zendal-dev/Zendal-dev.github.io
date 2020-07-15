@@ -1,5 +1,6 @@
 $(function () {
 
+   /* BURDER-MENU */
    const headerNav = $('.header-nav');
    headerNav.hide();
 
@@ -7,6 +8,8 @@ $(function () {
       $(this).toggleClass('open');
       headerNav.fadeToggle(250);
    });
+   /* /BURDER-MENU */
+
 
    /* SLICK SLIDER */
    $('.reviews-slider').slick({
@@ -24,5 +27,5 @@ $(function () {
       ]
    });
    /* /SLICK SLIDER */
-
+   
 });

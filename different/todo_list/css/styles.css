@@ -51,6 +51,10 @@ button {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  opacity: 1;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
   word-break: break-word;
   border-bottom: 1px solid #cfcfcf; }
 

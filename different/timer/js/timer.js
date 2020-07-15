@@ -28,7 +28,7 @@ class Timer {
       this.resetBtn.addEventListener('click', () => this.reset());
    }
 
-   getConvertionToMillisecond(hours, minutes, seconds) {
+   getConvertedToMillisecond(hours, minutes, seconds) {
       const hoursInMs = +hours * 60 * 60 * 1000, 
             minutesInMs = +minutes * 60 * 1000, 
             secondsInMs = +seconds * 1000;
@@ -60,7 +60,7 @@ class Timer {
    start() {
       const startTime = Date.now();
 
-      this.totalTime = this.getConvertionToMillisecond(
+      this.totalTime = this.getConvertedToMillisecond(
          this.hoursSelect.value,
          this.minutesSelect.value, 
          this.secondSelect.value
@@ -82,7 +82,7 @@ class Timer {
    }
 
    pause() {
-      if (this.started == false) return;
+      if (this.started === false) return;
       
       this.clearPlanning();
       this.timeHasPassed = this.delta;
@@ -90,7 +90,7 @@ class Timer {
    }
 
    reset() {
-      if (this.started == false) return;
+      if (this.started === false) return;
 
       this.clearPlanning();
       this.timerSelects.forEach(select => select.disabled = false);

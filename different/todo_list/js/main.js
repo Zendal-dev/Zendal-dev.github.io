@@ -79,7 +79,7 @@ taskEditorArea.addEventListener('input', function (event) {
    this.style.height = '' + this.scrollHeight + 'px';
 });
 
-
+// Удаление задачи
 taskItems.addEventListener('click', (event) => {
    const target = event.target;
 
@@ -87,11 +87,16 @@ taskItems.addEventListener('click', (event) => {
       const task = target.closest('.task-complete-btn');
       task.classList.add('active');
 
-      const promise = new Promise((resolve) => { // можно делитнуть промис
+      const promise = new Promise((resolve) => {
          setTimeout(() => {
             task.classList.remove('active');
+
+            setTimeout(() => {
+               task.classList.add('animate__animated', 'animate__fadeOut');
+            }, 200);
+
             resolve();
-         }, 300);
+         }, 350);
       });
 
       promise.then(() => deleteTask(task));
