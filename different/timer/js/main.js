@@ -1,6 +1,9 @@
-'use strict';
+import Timer from "./timer";
 
-const timer = new Timer();
+window.addEventListener('DOMContentLoaded', () => {
+
+   const timer = new Timer();
+});
 
 
 

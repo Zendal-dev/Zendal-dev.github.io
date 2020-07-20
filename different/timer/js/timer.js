@@ -1,5 +1,3 @@
-'use strict';
-
 class Timer {
    constructor() {
       this.display = document.querySelector('#display');
@@ -68,7 +66,7 @@ class Timer {
 
       if (!this.started && this.totalTime > 0) {
          this.timerSelects.forEach(select => select.disabled = true);
-
+         
          this.interval = setInterval(() => {
             this.display.textContent = this.formattingTime(startTime);
          });
@@ -98,4 +96,6 @@ class Timer {
       this.started = false;
    }
 
-} // Timer
+}
+
+export default Timer;
