@@ -4,15 +4,20 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Timer</title>
-   <link rel="stylesheet" href="styles.css">
+   <!-- Fontawesome  -->
    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+   <!-- Google fonts -->
    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&display=swap" rel="stylesheet">
+   <!-- Main styles -->
+   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-   
+
 <div class="timer">
    <div class="timer-panel">
-      <div id="display" class="timer-display">00:00:00</div>
+      <div id="display" class="timer-display">
+         <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+      </div>
 
       <div class="timer-controls">
          <button id="reset" class="timer__btn timer__btn--focus">
@@ -28,8 +33,8 @@
      
      <div class="timer-setting">
          <div class="timer-setting__row">
-            <label for="edt-hour" class="timer-setting__label">Час</label>
-            <select id="edt-hour" class="timer-setting__select">
+            <label for="set-hours" class="timer-setting__label">Час</label>
+            <select id="set-hours" class="timer-setting__select">
                <option>00</option>
                <option>01</option>
                <option>02</option>
@@ -133,8 +138,8 @@
             </select>
          </div>
          <div class="timer-setting__row">
-            <label for="edt-min" class="timer-setting__label">Мин.</label>
-            <select id="edt-min" class="timer-setting__select">
+            <label for="set-minutes" class="timer-setting__label">Мин.</label>
+            <select id="set-minutes" class="timer-setting__select">
                <option>00</option>
                <option>01</option>
                <option>02</option>
@@ -198,8 +203,8 @@
             </select>
          </div>
          <div class="timer-setting__row">
-            <label for="edt-sec" class="timer-setting__label">Сек.</label>
-            <select id="edt-sec" class="timer-setting__select">
+            <label for="set-seconds" class="timer-setting__label">Сек.</label>
+            <select id="set-seconds" class="timer-setting__select">
                <option>00</option>
                <option>01</option>
                <option>02</option>
@@ -267,7 +272,6 @@
 </div>
 
 <!-- Scripts -->
-<script src="js/timer.js"></script>
 <script src="js/main.js" type="module"></script>
 </body>
 </html>
