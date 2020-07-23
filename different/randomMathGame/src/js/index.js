@@ -9,7 +9,6 @@ class Game {
 
       this.started = false;
       this.solved = false;
-      this.finished = false;
 
       this.TIMEOUT = 1000 * 20;
       this.maxInt = 0;
@@ -63,7 +62,6 @@ class Game {
       const startTime = Date.now();
 
       this.started = true;
-      this.finished = false;
       this.maxInt = +maxCountField.value;
 
       // Обратный отсчет
@@ -146,7 +144,7 @@ class Game {
    }
 
    resetBtnHandler() {
-      this.finished = true;
+      this.started = false;
       this.userSolutionField.textContent = '';
       this.expressionField.textContent = '';
       clearInterval(this.intervalID);
