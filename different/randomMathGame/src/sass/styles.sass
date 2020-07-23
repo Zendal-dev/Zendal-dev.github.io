@@ -1,0 +1,215 @@
+// Variables
+$primary-dark: #152736
+$primary: #1E374C
+$white: #FFFFFF
+$blue: #6288C0
+$blue-light: #B2CBEF
+$red: #AC3F3F
+$red-light: #FFA5A5
+$yellow: #f2a621
+
+$radius: 15px
+$radius-sm: 10px
+$shadow: 0 4px 15px rgba(#000, .25)
+$inset-shadow: inset 0 0 15px rgba(#000, .15)
+
+$mq-screen-lg: 1000px
+
+// Default styles
+body
+   padding: 15px
+   font: 16px 'Roboto', sans-serif
+   color: $white
+   background-color: $primary-dark
+
+*, *::before, *::after
+   box-sizing: border-box
+   
+.container
+   width: 100%
+   max-width: 768px
+
+   display: flex
+   justify-content: space-around
+   align-items: center
+
+.ico
+   svg
+      fill: #fff
+      width: 25px
+      height: 25px
+
+.wrap
+   width: 100%
+   height: 100%
+   display: flex
+   justify-content: center
+   align-items: center
+
+// === nSelect ===
+
+.setting-panel
+   & .nselect.nsOrange .nselect__head
+      border-radius: $radius-sm
+      background-color: $blue
+      color: $white
+      &::after
+         border-color: $white transparent transparent transparent
+
+   & .nselect.nsOrange .nselect__inner
+      background-color: $primary
+
+   & .nselect.nsOrange .nselect__list li._active span
+      color: $yellow
+
+   & .nselect.nsOrange .nselect__list li span
+      font-family: inherit
+      color: $white
+      border-bottom: 1px solid $primary-dark
+      transition: background-color .3s ease
+      &:hover
+         background-color: rgba($blue, .3)
+
+
+// === Main styles ===
+.aside-panel
+   width: 100%
+   max-width: 300px
+   margin-bottom: -100px
+   margin-right: 100px
+
+.setting-panel
+   margin-bottom: 50px
+   &__text
+      margin-right: 10px
+      flex-grow: 1
+   &__item
+      padding: 7px 15px 5px
+      margin-bottom: 20px
+      display: flex
+      align-items: center
+      line-height: 1.5
+      box-shadow: $shadow, $inset-shadow
+      background-color: $primary
+      border-radius: $radius
+   &__select-wrap
+      text-align: right
+   &__ico
+      width: 20px
+      height: 20px
+      margin-right: 10px
+      display: inline-block
+      position: relative
+      top: 50%
+      svg
+         max-width: 100%
+         position: absolute
+         top: 50%
+         transform: translateY(-50%)
+   & .statistics
+      display: block
+      margin-bottom: 65px
+      padding: 0
+      &__header
+         margin-bottom: 5px
+         border-bottom: 2px solid $primary-dark
+         padding: 10px 20px 7px
+         align-items: center
+         display: flex
+      &-title
+         margin-left: 10px
+         margin-right: 0
+      &-info
+         padding: 7px 20px 15px
+         .statistics-correct
+            margin-bottom: 10px
+            color: $blue-light
+         .statistics-wrong
+            color: $red-light
+
+.control-buttons
+   text-align: center
+   &__btn
+      padding: 10px 20px
+      margin: 0 10px
+
+      font-family: inherit
+      font-size: 1rem
+      color: $white
+      font-weight: 500
+      letter-spacing: 1px
+      text-transform: uppercase
+
+      box-shadow: $shadow
+      border-radius: $radius-sm
+      border: none
+      background-color: $blue
+
+      transition: all .2s ease
+      &:hover
+         background-color: darken($blue, 10%)
+         box-shadow: none
+      &.btn-reset
+         background-color: $red
+         &:hover
+            background-color: darken($red, 7%)
+
+.work-section
+   & .time-block
+      margin-bottom: 50px
+      font-size: 1.3rem
+      text-align: center
+      span
+         letter-spacing: 1px
+         color: lighten($red, 25%)
+         position: relative
+         &::before
+            content: ''
+            position: absolute
+            bottom: 0
+            left: 0
+            width: 100%
+            height: 2px
+            background-color: lighten($red, 25%)
+
+   .calc
+      box-shadow: $shadow, $inset-shadow
+      border-radius: $radius
+      background-color: $primary
+      user-select: none
+      &-display
+         padding-top: 20px
+         height: 70px
+         display: flex
+         justify-content: space-around
+         border-bottom: 2px solid $primary-dark
+         font-size: 1.5rem
+      &-body
+         padding: 10px 20px 20px 0
+      table
+         border-collapse: collapse
+         td
+            display: inline-block
+            padding: 10px
+            width: 80px
+            overflow: hidden
+            white-space: nowrap
+            font-size: 1.2rem
+            text-align: center
+      &-btn
+         padding: 5px 10px 8px
+         width: 60px
+         height: 38px
+
+         font-family: inherit
+         color: $white
+         line-height: 1.6
+         text-transform: uppercase
+         background-color: $blue
+         border-radius: $radius-sm
+         border: none
+         &--red
+            background-color: $red
+         &.ico
+            padding: 7px 10px 5px
+
