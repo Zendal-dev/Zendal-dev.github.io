@@ -8,12 +8,11 @@
   },
   "author": "Zzz",
   "license": "ISC",
-  "devDependencies": {
-    "browser-sync": "^2.26.7",
-    "gulp": "^4.0.2",
-    "gulp-sass": "^4.1.0"
-  },
   "dependencies": {
+    "custom-select": "^1.1.15",
     "jquery": "^3.5.1"
+  },
+  "devDependencies": {
+    "sass": "^1.26.10"
   }
 }

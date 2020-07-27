@@ -1,3 +1,6 @@
+@import "reset.scss"
+@import "./libs/custom-select"
+
 // Variables
 $primary-dark: #152736
 $primary: #1E374C
@@ -47,29 +50,44 @@ body
    align-items: center
 
 // === nSelect ===
-
 .setting-panel
-   & .nselect.nsOrange .nselect__head
+   & .custom-select-opener
       border-radius: $radius-sm
       background-color: $blue
       color: $white
       &::after
          border-color: $white transparent transparent transparent
 
-   & .nselect.nsOrange .nselect__inner
+   & .custom-select-panel
+      margin-top: 10px
+      width: auto
       background-color: $primary
+      border-radius: $radius-sm
+      text-align: center
+      left: 50%
+      transform: translateX(-50%)
+      /* Width */
+      &::-webkit-scrollbar
+         width: 0
 
-   & .nselect.nsOrange .nselect__list li._active span
-      color: $yellow
+      /* Track */
+      &::-webkit-scrollbar-track
+         background: transparent
 
-   & .nselect.nsOrange .nselect__list li span
-      font-family: inherit
-      color: $white
+      /* Handle */
+      &::-webkit-scrollbar-thumb
+         background: transparent
+
+   & .custom-select-option.is-selected::before
+      display: none
+
+   & .custom-select-option
+      padding: .3em 1em
       border-bottom: 1px solid $primary-dark
-      transition: background-color .3s ease
-      &:hover
-         background-color: rgba($blue, .3)
 
+   & .custom-select-option.has-focus
+      background-color: inherit
+      color: $yellow
 
 // === Main styles ===
 .aside-panel
