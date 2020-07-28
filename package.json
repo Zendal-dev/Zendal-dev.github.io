@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/Zendal-dev/Zendal-dev.github.io/issues"
   },
-  "homepage": "https://Zendal-dev.github.io/website",
+  "homepage": "https://github.com/Zendal-dev/zendal-dev.github.io/website",
   "devDependencies": {
     "parcel-bundler": "^1.12.4"
   }
