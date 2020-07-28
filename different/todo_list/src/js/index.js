@@ -21,11 +21,11 @@ const renderTaskItem = task => {
 
    taskItem.innerHTML = `
       <button class="task-complete-btn" data-id="${task.id}">
-         <img src="images/check.svg" alt="">
+         <img src="assets/images/check.svg" alt="">
       </button>
       <p class="task-items__item-text">${task.description}</p>
       <button class="task-trash" data-id="${task.id}">
-         <img src="images/trash.svg" alt="">
+         <img src="assets/images/trash.svg" alt="">
       </button>
    `;
 
