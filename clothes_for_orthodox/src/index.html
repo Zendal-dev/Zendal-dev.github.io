@@ -6,12 +6,8 @@
    <title>Крестница</title>
    <!-- Fotorama slider -->
    <link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
-   <!-- Bootstrap -->
-   <link rel="stylesheet" href="css/bootstrap.min.css">
-   <!-- Reset.css -->
-   <link rel="stylesheet" href="css/reset.css">
    <!-- Main styles -->
-   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="sass/styles.sass">
 </head>
 <body>
 
@@ -42,7 +38,7 @@
    <div class="container-custom">
       <div class="row align-items-center">
          <div class="col-auto col-lg-3">
-            <img class="header__logo" src="img/logo.svg" alt="">
+            <img class="header__logo" src="assets/img/logo.svg" alt="">
          </div>
          <div class="col col-md-auto col-lg-3 order-md-1">
             <a class="float-right header__phone" href="tel:+88002017664">+8 (800) 201-76-64</a>
@@ -99,11 +95,11 @@
                   data-arrows="false"
                   data-click="true"
                   data-swipe="true">
-                  <img src="img/product/img-1.jpg" alt="">
-                  <img src="img/product/img-2.jpg" alt="">
-                  <img src="img/product/img-3.jpg" alt="">
-                  <img src="img/product/img-4.jpg" alt="">
-                  <img src="img/product/img-5.jpg" alt="">
+                  <img src="assets/img/product/img-1.jpg" alt="">
+                  <img src="assets/img/product/img-2.jpg" alt="">
+                  <img src="assets/img/product/img-3.jpg" alt="">
+                  <img src="assets/img/product/img-4.jpg" alt="">
+                  <img src="assets/img/product/img-5.jpg" alt="">
                </div>
             </div>
             <div class="col col-sm-6">
@@ -176,23 +172,23 @@
    <div class="container-custom">
       <div class="row justify-content-center">
          <div class="col-12 col-sm-6 col-md features-item">
-            <div class="features__icon"><img src="img/features/icon-1.svg" alt=""></div>
+            <div class="features__icon"><img src="assets/img/features/icon-1.svg" alt=""></div>
             <p class="features__text">Гарантия качества</p>
          </div>
          <div class="col-12 col-sm-6 col-md features-item">
-            <div class="features__icon"><img src="img/features/icon-2.svg" alt=""></div>
+            <div class="features__icon"><img src="assets/img/features/icon-2.svg" alt=""></div>
             <p class="features__text">Индивидуальный пошив</p>
          </div>
          <div class="col-12 col-sm-6 col-md features-item">
-            <div class="features__icon"><img src="img/features/icon-3.svg" alt=""></div>
+            <div class="features__icon"><img src="assets/img/features/icon-3.svg" alt=""></div>
             <p class="features__text">Скидки и программа лояльности </p>
          </div>
          <div class="col-12 col-sm-6 col-md features-item">
-            <div class="features__icon"><img src="img/features/icon-4.svg" alt=""></div>
+            <div class="features__icon"><img src="assets/img/features/icon-4.svg" alt=""></div>
             <p class="features__text">Возврат денежных средств в течении 3 дней</p>
          </div>
          <div class="col-12 col-sm-6 col-md features-item">
-            <div class="features__icon"><img src="img/features/icon-5.svg" alt=""></div>
+            <div class="features__icon"><img src="assets/img/features/icon-5.svg" alt=""></div>
             <p class="features__text">Доставка в течении 3-5 дней по России.</p>
          </div>
       </div>
@@ -207,7 +203,7 @@
       <div class="row">
          <div class="col-12 col-md-5">
             <div class="about__img">
-               <img src="img/about/img-1.jpg" alt="">
+               <img src="assets/img/about/img-1.jpg" alt="">
             </div>
          </div>
          <div class="col">
@@ -227,21 +223,21 @@
    <div class="container-custom">
       <div class="row">
          <div class="col-12 col-sm-3">
-            <div class="logo"><img src="img/logo.svg" alt=""></div>
+            <div class="logo"><img src="assets/img/logo.svg" alt=""></div>
             <div class="socials">
                <a href="#" class="socials__link" target="_blank">
                   <svg class="socials__svg">
-                     <use xlink:href="#vkontakte"></use>
+                     <use href="#vkontakte"></use>
                   </svg>
                </a>
                <a href="#" class="socials__link" target="_blank">
                   <svg class="socials__svg">
-                     <use xlink:href="#instagram"></use>
+                     <use href="#instagram"></use>
                   </svg>
                </a>
                <a href="#" class="socials__link" target="_blank">
                   <svg class="socials__svg">
-                     <use xlink:href="#youtube"></use>
+                     <use href="#youtube"></use>
                   </svg>
                </a>
             </div>
@@ -268,10 +264,9 @@
 </footer>
 <!-- /Footer -->
 
-<!-- Scripts -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- Fotorama slider -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="./js/main.js" type="module"></script>
+<!-- Main script -->
+<script src="js/index.js"></script>
 </body>
 </html>

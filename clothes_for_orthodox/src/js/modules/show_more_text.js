@@ -1,4 +1,4 @@
-const showMoreText = () => {
+const show_more_text = () => {
    const SYMBOLS_COUNT = 430;
    const textEl = document.querySelector('.about__text');
    const textChilds = Array.from(document.querySelectorAll('.about__text > p'));
@@ -38,4 +38,4 @@ const showMoreText = () => {
    checkTextLength();
 };
 
-export default showMoreText;
+export default show_more_text;

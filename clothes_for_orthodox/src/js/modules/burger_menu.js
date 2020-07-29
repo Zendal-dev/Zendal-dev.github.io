@@ -1,4 +1,4 @@
-const burgerMenu = () => {
+const burger_menu = () => {
    const burgerEl = document.querySelector('#burger');
    const burgerElParent = burgerEl.parentElement;
    const burgerItemEl = document.querySelector('.burger__item');
@@ -13,4 +13,4 @@ const burgerMenu = () => {
    });
 };
 
-export default burgerMenu;
+export default burger_menu;
