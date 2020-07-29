@@ -1,0 +1,23 @@
+// Helpers
+@import "helpers/variables";
+
+@import "_interface";
+
+// Components
+@import "components/btn";
+@import "components/section";
+@import "components/form";
+@import "components/nav";
+@import "components/burger";
+
+
+//Blocks
+@import "blocks/header";
+@import "blocks/intro";
+@import "blocks/dishes";
+@import "blocks/offer";
+@import "blocks/types";
+@import "blocks/feedback";
+@import "blocks/footer";
+
+

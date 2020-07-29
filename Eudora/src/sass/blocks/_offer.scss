@@ -1,0 +1,72 @@
+.offer {
+    &__text-wrap {
+        padding: 70px 20px;
+        background-color: $primary;
+    }
+
+    &__text {
+        max-width: 340px;
+        margin: 0 auto;
+
+        font-size: 4rem;
+        font-weight: 700;
+        color: $white;
+        font-style: italic;
+    }
+
+    &__img {
+        height: 300px;
+        background: $black url("../img/offer-bg.jpg") no-repeat center/cover;
+    }
+}
+
+@media (min-width: $screen-lg-min) {
+    .offer {
+        display: flex;
+
+        &__text-wrap {
+            padding: 140px 0;
+            width: 40%;
+        }
+    
+        &__text {
+            max-width: 340px;
+            margin: 0 auto;
+            font-size: 4rem;
+        }
+
+        &__img {
+            height: auto;
+            width: 60%;
+        }
+    }
+}
+
+@media (max-width: $screen-md-max) {
+    .offer {
+        
+        &__text-wrap {
+            padding: 70px 20px;
+        }
+
+        &__img {
+            height: 300px;
+        }
+    }
+}
+
+@media (max-width: $screen-sm-max) {
+    .offer {
+        &__text-wrap {
+            padding: 70px 20px;
+        }
+
+        &__text {
+            font-size: 2rem;
+        }
+
+        &__img {
+            height: 150px;
+        }
+    }
+}
