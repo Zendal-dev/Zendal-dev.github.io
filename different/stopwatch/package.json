@@ -1,0 +1,13 @@
+{
+  "name": "stopwatch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "deploy": "parcel build src/index.html --out-dir dist --public-url ./"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

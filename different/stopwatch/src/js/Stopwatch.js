@@ -1,5 +1,3 @@
-'use strict';
-
 class Stopwatch {
    constructor() {
       this.display = document.querySelector('#display');
@@ -85,14 +83,6 @@ class Stopwatch {
         </div>
       `);
    }
-} // /Stopwatch
+}
 
-const stopwatch = new Stopwatch();
-
-
-
-
-
-
-
-
+export default Stopwatch;
