@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 $(function () {
 
    /* BURGER-MENU */
@@ -34,5 +36,3 @@ $(function () {
    });
 
 });
-
-console.log('hello');
