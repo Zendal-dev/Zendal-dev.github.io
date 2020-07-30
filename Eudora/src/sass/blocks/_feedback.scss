@@ -1,12 +1,11 @@
 .feedback {
     padding-left: 10px;
     padding-right: 10px;
-    background: $black url("../img/feedback-bg.jpg") no-repeat center/cover;
+    background: $black url("../assets/img/feedback-bg.jpg") no-repeat center/cover;
 
     display: flex;
     flex-direction: column;
     text-align: center;
-
     &__title {
         margin-bottom: 80px;
         font-size: 4rem;

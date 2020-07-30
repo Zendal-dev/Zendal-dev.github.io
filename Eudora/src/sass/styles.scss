@@ -1,8 +1,10 @@
 // Reset styles
+@import "reset";
 
 // Helpers
 @import "helpers/variables";
 
+// Common styles
 @import "_interface";
 
 // Components
@@ -11,7 +13,6 @@
 @import "components/form";
 @import "components/nav";
 @import "components/burger";
-
 
 //Blocks
 @import "blocks/header";

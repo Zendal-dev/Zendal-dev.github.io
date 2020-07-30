@@ -3,10 +3,7 @@
     padding: 95px 10px 30px;
     position: absolute;
     top: 0; left: 0;
-
-
     background-color: rgba(000, 000, 000, .65);
-
     &__logo {
         font-size: 4rem;
         color: $primary;
@@ -67,7 +64,6 @@
     .burger {
         display: block;
         margin-bottom: 30px;
-
         &.active:hover ~ .header-nav {
             height: auto;
             font-size: 1rem;
