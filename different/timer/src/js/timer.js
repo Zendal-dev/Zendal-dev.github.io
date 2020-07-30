@@ -1,27 +1,27 @@
 class Timer {
    constructor(selector) {
-      this._timerSelector = selector;
-      this._timerSelects = document.querySelectorAll('.timer-setting__select');
-      this._diss = 0;
-      this._totalTime = 0;
-      this._timeHasPassed = 0;
-      this._started = false;
-      this._interval = null;
-      this._timeout = null;
+      this.timerSelector = selector;
+      this.timerSelects = document.querySelectorAll('.timer-setting__select');
+      this.diss = 0;
+      this.totalTime = 0;
+      this.timeHasPassed = 0;
+      this.started = false;
+      this.interval = null;
+      this.timeout = null;
 
-      this.init();
+      this.#setup();
    }
 
    clearPlanning() {
-      clearInterval(this._interval);
-      clearTimeout(this._timeout);
+      clearInterval(this.interval);
+      clearTimeout(this.timeout);
    }
 
-   addZero(num) {
+   #addZero(num) {
       return String(num).padStart(2, '0');
    }
 
-   init() {
+   #setup() {
       const resetBtn = document.querySelector('#reset'),
             pauseBtn = document.querySelector('#pause'),
             startBtn = document.querySelector('#start');
@@ -31,24 +31,24 @@ class Timer {
       resetBtn.addEventListener('click', () => this.reset());
    }
 
-   getTimeRemaining(timestamp) {
+   #getTimeRemaining(timestamp) {
       const currentTime = Date.parse(new Date().toString());
 
-      this._diss = (timestamp - this._timeHasPassed) - currentTime;
+      this.diss = (timestamp - this.timeHasPassed) - currentTime;
 
-      const seconds = Math.floor((this._diss / 1000) % 60),
-            minutes = Math.floor((this._diss / 1000 / 60) % 60),
-            hours = Math.floor((this._diss / 1000/ 60 / 60) % 60);
+      const seconds = Math.floor((this.diss / 1000) % 60),
+            minutes = Math.floor((this.diss / 1000 / 60) % 60),
+            hours = Math.floor((this.diss / 1000/ 60 / 60) % 60);
 
       return {
-         'total': this._diss,
+         'total': this.diss,
          'hours': hours,
          'minutes': minutes,
          'seconds': seconds
       }
    }
 
-   getTimeTemplate(selector = this._timerSelector) {
+   #getTimeTemplate(selector = this.timerSelector) {
       const date = new Date(),
             timer = document.querySelector(selector),
             hours = timer.querySelector('#set-hours'),
@@ -62,53 +62,53 @@ class Timer {
       return Date.parse(date.toString());
    }
 
-   setClock(timestamp, isReset = false, selector = this._timerSelector) {
+   #setClock(timestamp, isReset = false, selector = this.timerSelector) {
       const timer = document.querySelector(selector),
             hours = timer.querySelector('#hours'),
             minutes = timer.querySelector('#minutes'),
             seconds = timer.querySelector('#seconds'),
-            time = this.getTimeRemaining(timestamp);
+            time = this.#getTimeRemaining(timestamp);
 
-      hours.textContent = !isReset ? this.addZero(time.hours) : '00';
-      minutes.textContent = !isReset ? this.addZero(time.minutes) : '00';
-      seconds.textContent = !isReset ? this.addZero(time.seconds) : '00';
+      hours.textContent = !isReset ? this.#addZero(time.hours) : '00';
+      minutes.textContent = !isReset ? this.#addZero(time.minutes) : '00';
+      seconds.textContent = !isReset ? this.#addZero(time.seconds) : '00';
    }
 
    start() {
-      const timestamp = this.getTimeTemplate();
-      this._totalTime = this.getTimeRemaining(timestamp).total;
+      const timestamp = this.#getTimeTemplate();
+      this.totalTime = this.#getTimeRemaining(timestamp).total;
 
-      if (this._totalTime > 0) {
-         this._timerSelects.forEach(select => select.disabled = true);
+      if (this.totalTime > 0) {
+         this.timerSelects.forEach(select => select.disabled = true);
 
-         this._interval = setInterval(() => {
-            this.setClock(timestamp);
+         this.interval = setInterval(() => {
+            this.#setClock(timestamp);
          }, 1000);
 
-         this._timeout = setTimeout(this.clearPlanning, this._totalTime);
+         this.timeout = setTimeout(this.clearPlanning, this.totalTime);
       }
 
-      this._started = true;
+      this.started = true;
    }
 
    pause() {
-      if (!this._started) return;
+      if (!this.started) return;
       
       this.clearPlanning();
-      this._timeHasPassed = this._totalTime - this._diss;
-      this._started = false;
+      this.timeHasPassed = this.totalTime - this.diss;
+      this.started = false;
    }
 
    reset() {
-      if (!this._started) return;
+      if (!this.started) return;
 
       this.clearPlanning();
-      this.setClock(0, true);
-      this._timerSelects.forEach(select => {
+      this.#setClock(0, true);
+      this.timerSelects.forEach(select => {
          select.disabled = false;
          select[0].selected = true;
       });
-      this._started = false;
+      this.started = false;
    }
 }
 
