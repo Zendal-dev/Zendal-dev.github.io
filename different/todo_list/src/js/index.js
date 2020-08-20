@@ -4,12 +4,11 @@ const generateId = () => {
    return Math.round((Math.random() * 1e8)).toString(16);
 };
 
-const
-   taskItems = document.querySelector('.task-items'),
-   taskEditorArea = document.querySelector('.task-editor__area'),
-   taskEditor = document.querySelector('.task-editor'),
-   addTaskBtn = document.querySelector('.task-editor__add-btn'),
-   cancelTaskBtn = document.querySelector('.task-editor__cancel-btn');
+const taskItems = document.querySelector('.task-items'),
+      taskEditorArea = document.querySelector('.task-editor__area'),
+      taskEditor = document.querySelector('.task-editor'),
+      addTaskBtn = document.querySelector('.task-editor__add-btn'),
+      cancelTaskBtn = document.querySelector('.task-editor__cancel-btn');
 
 addTaskBtn.classList.add('task-editor__add-btn--disabled');
 
@@ -79,7 +78,7 @@ taskEditorArea.addEventListener('input', function (event) {
    this.style.height = '' + this.scrollHeight + 'px';
 });
 
-// Удаление задачи
+// Deleting a task
 taskItems.addEventListener('click', (event) => {
    const target = event.target;
 
@@ -87,19 +86,15 @@ taskItems.addEventListener('click', (event) => {
       const task = target.closest('.task-complete-btn');
       task.classList.add('active');
 
-      const promise = new Promise((resolve) => {
+      setTimeout(() => {
+         task.classList.remove('active');
+
          setTimeout(() => {
-            task.classList.remove('active');
+            task.classList.add('animate__animated', 'animate__fadeOut');
+         }, 200);
 
-            setTimeout(() => {
-               task.classList.add('animate__animated', 'animate__fadeOut');
-            }, 200);
-
-            resolve();
-         }, 350);
-      });
-
-      promise.then(() => deleteTask(task));
+         deleteTask(task);
+      }, 350);
 
    } else if (target.closest('.task-trash')) {
       const task = target.closest('.task-trash');
