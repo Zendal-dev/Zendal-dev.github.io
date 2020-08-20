@@ -5,8 +5,8 @@ class Game {
       this.userSolutionField = document.querySelector('.user-response');
       this.calcBody = document.querySelector('.calc-body');
 
-      this.started = false;
-      this.solved = false;
+      this.isStarted = false;
+      this.isSolved = false;
 
       this.TIMEOUT = 1000 * 20;
       this.maxInt = 0;
@@ -17,18 +17,11 @@ class Game {
       this.userAnswer = null;
       this.operation = '+';
 
-      this.methods = {
-         '+': ({a, b} = {}) => a + b,
-         '-': ({a, b} = {}) => a - b,
-         '*': ({a, b} = {}) => a * b,
-         '/': ({a, b} = {}) => a / b
-      };
-
-      this.calcBodyHandlerWrap = (e) => this.calcBodyHandler(e);
-      this.init();
+      this.calcBodyHandlerWrap = e => this.calcBodyHandler(e);
+      this.setup();
    }
 
-   init() {
+   setup() {
       const operatorSelect = document.querySelector('#operation');
       operatorSelect.onchange = function(e) {
          this.operation = e.target.options[e.target.selectedIndex].dataset.operation;
@@ -47,22 +40,22 @@ class Game {
 
    showResultWindow() {
       const correctCount = document.querySelector('.correct-count'),
-         wrongCount = document.querySelector('.wrong-count');
+            wrongCount = document.querySelector('.wrong-count');
 
       correctCount.textContent = this.correctAnswersCount;
       wrongCount.textContent = this.incorrectAnswersCount;
    }
 
    startBtnHandler() {
-      if (this.started) return;
+      if (this.isStarted) return;
 
-      const maxCountField = document.querySelector('#max-value');
-      const startTime = Date.now();
+      const maxCountField = document.querySelector('#max-value'),
+            startTime = Date.now();
 
-      this.started = true;
+      this.isStarted = true;
       this.maxInt = +maxCountField.value;
 
-      // Обратный отсчет
+      // Countdown
       this.intervalID = setInterval(() => {
          const time = this.TIMEOUT - (Date.now() - startTime);
          this.countdownField.textContent = time;
@@ -73,24 +66,31 @@ class Game {
          }
       }, 0);
 
-      // Генерация и вывод рандомного выражения
+      // Generation and output random expressions
       this.generateNewGameIteration();
 
-      // Клик на любую кнопку
+      // Pressing any button
       this.calcBody.addEventListener('click', this.calcBodyHandlerWrap);
    }
 
    generateNewGameIteration() {
+      const methods = {
+         '+': ({a, b} = {}) => a + b,
+         '-': ({a, b} = {}) => a - b,
+         '*': ({a, b} = {}) => a * b,
+         '/': ({a, b} = {}) => a / b
+      };
+
       const randomInts = { // TODO: Деструктуризация сделана криво. Придумать лучшее решение
          a: this.getRandomInt(this.maxInt),
          b: this.getRandomInt(this.maxInt)
       };
 
-      // Вывод сгенерированного выражения
+      // Outputting the generated expression
       this.expressionField.textContent = `${randomInts.a} ${this.operation} ${randomInts.b}`;
 
-      // Запись правильного ответа
-      this.trueAnswer = this.methods[this.operation](randomInts);
+      // Recording the correct answer
+      this.trueAnswer = methods[this.operation](randomInts);
    }
 
    calcBodyHandler(event) {
@@ -98,12 +98,12 @@ class Game {
       const MAX_ANSWER_LENGTH = 6;
       const btnData = target.dataset.btn;
 
-      if (!this.started) return;
+      if (!this.isStarted) return;
 
       switch (true) {
          case btnData === 'solution' :
             this.userSolutionField.textContent = this.trueAnswer;
-            this.solved = true;
+            this.isSolved = true;
             break;
 
          case (btnData === 'del') && (this.userSolutionField.textContent.length > 0) :
@@ -119,10 +119,10 @@ class Game {
             break;
 
          case btnData === 'ok' :
-            if (this.solved) { // может быть защитывать в неправильные ответы
+            if (this.isSolved) {
                this.userSolutionField.textContent = '';
                this.generateNewGameIteration();
-               this.solved = false;
+               this.isSolved = false;
                break;
             }
             this.userAnswer = +this.userSolutionField.textContent;
@@ -142,7 +142,7 @@ class Game {
    }
 
    resetBtnHandler() {
-      this.started = false;
+      this.isStarted = false;
       this.userSolutionField.textContent = '';
       this.expressionField.textContent = '';
       clearInterval(this.intervalID);
