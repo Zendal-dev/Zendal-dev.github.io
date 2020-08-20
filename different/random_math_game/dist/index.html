@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Random Math</title>
+   <!-- Main styles -->
+   <link rel="stylesheet" href="/styles.fe8b7b49.css">
+<script src="/styles.fe8b7b49.js"></script></head>
+<body>
+
+<div class="wrap">
+   <div class="container">
+      <div class="aside-panel">
+
+         <div class="setting-panel">
+            <div class="setting-panel__item statistics">
+               <div class="statistics__header">
+               <span class="setting-panel__ico">
+                  <img src="/report.8c9c30e6.svg" alt="">
+               </span>
+                  <p class="setting-panel__text statistics-title">Game statistics</p>
+               </div>
+               <div class="statistics-info">
+                  <p class="statistics-correct">Correct answers:
+                     <span class="correct-count">0</span>
+                  </p>
+                  <p class="statistics-wrong">Wrong answers:
+                     <span class="wrong-count">0</span>
+                  </p>
+               </div>
+            </div>
+
+            <div class="setting-panel__item">
+               <span class="setting-panel__ico">
+                  <img src="/summit.d3684061.svg" alt="">
+               </span>
+               <p class="setting-panel__text">Select max value</p>
+               <div class="setting-panel__select-wrap">
+                  <select id="max-value" class="setting-panel__select">
+                     <option>10</option>
+                     <option>50</option>
+                     <option>100</option>
+                     <option>500</option>
+                     <option>1000</option>
+                  </select>
+               </div>
+            </div>
+
+            <div class="setting-panel__item">
+               <span class="setting-panel__ico">
+                  <img src="/maths.0ef4ba6c.svg" alt="">
+               </span>
+               <span class="setting-panel__text">Select operation</span>
+               <select id="operation" class="setting-panel__select">
+                  <option>Addition</option>
+                  <option>Subtraction</option>
+                  <option>Multiply</option>
+                  <option>Division</option>
+               </select>
+            </div>
+         </div><!-- /.setting-panel -->
+
+         <div class="control-buttons">
+            <button class="control-buttons__btn btn-start">Start</button>
+            <button class="control-buttons__btn btn-reset">Reset</button>
+         </div>
+      </div> <!-- /.aside-panel -->
+
+      <div class="work-section">
+         <div class="time-block">
+            Time left: <span class="time-left">0</span>
+         </div>
+
+         <div class="calc">
+            <div class="calc-display">
+               <div class="expression"></div>
+               <div class="user-response"></div>
+            </div>
+            <div class="calc-body">
+               <table>
+                  <tr>
+                     <td data-btn="num">7</td>
+                     <td data-btn="num">8</td>
+                     <td data-btn="num">9</td>
+                     <td>
+                        <button class="calc-btn calc-btn--red" data-btn="del">Del</button>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td data-btn="num">4</td>
+                     <td data-btn="num">5</td>
+                     <td data-btn="num">6</td>
+                     <td>
+                        <button class="calc-btn ico" data-btn="next">
+                           <img src="/arrow.93fa425c.svg" alt="">
+                        </button>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td data-btn="num">1</td>
+                     <td data-btn="num">2</td>
+                     <td data-btn="num">3</td>
+                     <td>
+                        <button class="calc-btn" data-btn="solution">?=</button>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td></td>
+                     <td data-btn="num">0</td>
+                     <td>
+                        <button class="calc-btn" data-btn="ok">Ok</button>
+                     </td>
+                     <td></td>
+                  </tr>
+               </table>
+            </div>
+         </div> <!-- /.calc -->
+      </div> <!-- /.work-section -->
+   </div> <!-- /.container -->
+</div>
+
+<!-- Scripts -->
+<script src="/js.00a46daa.js"></script>
+</body>
+</html>
