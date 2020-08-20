@@ -1,5 +1,5 @@
 import tabs from "./tabs";
-import renderHeader from "./renderHeader";
+import { renderHeader } from "./render";
 
 const gallery = (selector, apiKey) => {
 

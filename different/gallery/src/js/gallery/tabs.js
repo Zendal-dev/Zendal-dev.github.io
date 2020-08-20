@@ -1,5 +1,12 @@
-import renderBody from "./renderBody";
-import updateImages from "./updateImage";
+import { renderBody } from "./render";
+
+const updateImages = async (tag, selector, apiKey) => {
+   const url = `https://api.unsplash.com/search/photos?page=1&order_by=latest&query=${tag}&client_id=${apiKey}`,
+      response = await fetch(url),
+      images = await response.json();
+
+   renderBody(images, selector);
+};
 
 const tabs = (apiKey, selector) => {
    const $gallery = document.querySelector(selector),
@@ -14,7 +21,7 @@ const tabs = (apiKey, selector) => {
          target.classList.add('active');
 
          const tag = target.dataset.tag;
-         updateImages(tag, selector, apiKey);
+         await updateImages(tag, selector, apiKey);
       }
    });
 
