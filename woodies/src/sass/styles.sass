@@ -1,0 +1,369 @@
+@import "libs"
+@import "fonts"
+@import "vars"
+@import "reset"
+@import "global"
+
+// Header
+.header
+   padding: 23px 0
+   position: fixed
+   left: 0
+   right: 0
+   top: 0
+   z-index: 1000
+   transition: background-color .3s ease
+   &.bg-active
+      background-color: #fff
+      .header__btn:focus
+         background-color: $accent
+         color: #fff
+   &__logo
+      cursor: pointer
+      transform: scale(.8)
+   &__inner
+      display: flex
+      justify-content: space-between
+      align-items: center
+   &__btn
+      margin-right: -100px
+   &__nav
+      display: flex
+      &-item
+         margin: 0 24px
+         & > a
+            transition: all .1s ease
+            &:hover
+               color: $accent
+
+
+
+// Intro
+.intro
+   padding-top: 80px
+   margin-bottom: 100px
+   position: relative
+   &::after
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      z-index: -1
+      width: 370px
+      height: 800px
+
+      border-radius: 0 0 0 150px
+      background-color: #F9BDBD
+   &__inner
+      padding: 85px 0
+      display: flex
+      align-items: flex-start
+      justify-content: space-between
+      position: relative
+      &::after
+         content: ''
+         position: absolute
+         right: 90px
+         bottom: 140px
+         z-index: -1
+         width: 390px
+         height: 390px
+
+         background-image: url("./../assets/images/bg-flower.png")
+         background-repeat: no-repeat
+         background-position: 0 0
+   &__content
+      padding-top: 50px
+   &__suptitle
+      max-width: 504px
+      margin-bottom: 16px
+      font-size: 2.2rem
+   &__title
+      max-width: 390px
+      margin-bottom: 16px
+      color: $black
+      font-size: 4.5rem
+   &__img
+      margin-right: -200px
+      & > img
+         display: block
+         width: 100%
+         height: 100%
+         object-fit: cover
+
+
+
+// About
+.about
+   &__blocks
+      padding-top: 45px
+      position: relative
+      &::before
+         content: ''
+         position: absolute
+         left: -220px
+         top: 50%
+         transform: translateY(-50%)
+         width: 390px
+         height: 390px
+
+         background-image: url("./../assets/images/bg-flower.png")
+         background-repeat: no-repeat
+         background-position: 0 0
+   &__block
+      display: flex
+      justify-content: space-between
+      align-items: center
+      &--first
+         position: relative
+         &::before
+            content: ''
+            width: 278px
+            height: 388px
+            position: absolute
+            left: 0
+            z-index: -1
+            background-color: #F7DEA6
+            border-radius: 0 100px 0 100px
+   &__img
+      margin-right: -100px
+   &__info
+      &--left
+         padding-right: 80px
+      &--right
+         padding-left: 80px
+      &-title
+         font-size: 2.2rem
+         color: $black
+         font-weight: 800
+         line-height: 1.5
+      &-text
+         font-size: 1.5rem
+         color: #000
+         line-height: 1.5
+
+
+// Process
+.process
+   &__items
+      margin-bottom: 60px
+      display: flex
+      justify-content: space-between
+      counter-reset: item
+   &__item
+      display: inline-flex
+      align-items: center
+      justify-content: flex-end
+      flex-direction: column
+      &-img
+         margin-bottom: 24px
+         position: relative
+         &::before
+            counter-increment: item
+            content: counter(item)
+            position: absolute
+            left: -55px
+            bottom: 0
+            z-index: -1
+            font-size: 6.5rem
+            font-weight: 600
+            color: rgba(249, 189, 189, 0.25)
+            line-height: .7
+      &-name
+         font-size: 1.5rem
+         font-weight: 800
+   &__btn
+      text-align: center
+
+
+// Categories
+.categories
+   &__items
+      display: flex
+      flex-wrap: wrap
+   &__btn
+      margin-top: 18px
+      text-align: right
+   &__img
+      height: 100%
+      position: relative
+      & > img
+         position: absolute
+         width: 100%
+         height: 100%
+         object-fit: contain
+   &__line
+      display: flex
+      flex-wrap: wrap
+      &:nth-child(1)
+         .categories__item:nth-child(1)
+            .categories__img
+               margin-left: -18px
+   &__item
+      padding: 24px 16px
+      margin-bottom: 40px
+
+      width: 280px
+      height: 400px
+      display: flex
+
+      align-content: center
+      justify-content: center
+      flex-direction: column
+
+      background-color: #F9BDBD
+      border-radius: 0 100px 0 100px
+      &:not(:nth-child(3n + 3))
+         margin-right: 56px
+      &:nth-child(2)
+         background-color: #F7DEA6
+      &:nth-child(3)
+         background-color: #A8DCEC
+      &-name
+         margin-bottom: 30px
+         font-size: 1.5rem
+         color: $black
+         font-weight: 800
+
+
+// Testimony
+.testimony
+   margin-bottom: 150px
+   &-slider
+      position: relative
+      padding-bottom: 30px
+      &__item
+         padding: 0 5px
+         display: flex
+         align-items: flex-start
+         width: 100%
+         position: relative
+      &__images
+         display: flex
+         align-items: flex-start
+         &-img
+            margin-right: 40px
+            border-radius: 100px 0 100px 0
+            width: 240px
+            height: 360px
+            overflow: hidden
+            box-shadow: 0 0 8px rgba(0, 0, 0, .15)
+            & > img
+               width: 100%
+               height: 100%
+               object-fit: cover
+      &__feedback
+         margin-bottom: 21px
+         padding: 54px 16px
+         max-height: 380px
+         font-size: .9rem
+         color: $black
+         line-height: 1.4
+         font-weight: 600
+         border: 1px solid #A8DCEC
+         border-radius: 0 100px 0 100px
+         &-text
+            overflow: hidden
+            max-height: 80px
+         &-rating
+            margin-bottom: 16px
+         &-img
+            margin-right: 8px
+            display: inline-block
+            overflow: hidden
+            border-radius: 50%
+            & > img
+               display: block
+         &-author
+            display: flex
+            align-items: center
+            color: $gray-text
+      &__buttons
+         position: absolute
+         right: 0
+         z-index: 1000
+         bottom: 10px
+         width: 410px
+         margin-bottom: 23px
+         display: flex
+         justify-content: space-between
+         & button
+            width: 100px
+            position: static
+            color: $black
+            font-size: .9rem
+            font-weight: 600
+            cursor: pointer
+            &:first-child
+               & > svg
+                  margin-right: 8px
+            &:last-child
+               & > svg
+                  margin-left: 8px
+            & > svg
+               width: 32px
+
+
+
+// Footer
+.footer
+   padding-bottom: 60px
+   background-image: url("./../assets/images/footer-bg.png")
+   background-repeat: no-repeat
+   background-position: right bottom
+   background-color: #F0F0F0
+   position: relative
+   &__form
+      padding: 50px 0
+      margin-bottom: 30px
+      background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%)
+      &-inner
+         display: flex
+         justify-content: space-between
+      &-text
+         margin-right: 30px
+         font-size: 1.1rem
+         line-height: 1.2
+         color: #000
+      &-input
+         display: flex
+         & > input
+            margin-right: -5px
+            padding: 9px 16px
+            width: 328px
+            border: 2px solid $accent
+            border-radius: 4px
+            font-size: 1rem
+            color: $gray-text
+            &::placeholder
+               font-family: inherit
+               font-size: inherit
+               color: $gray-text
+   &__copy
+      position: absolute
+      bottom: 20px
+      left: 0
+      right: 0
+      text-align: center
+   &__content
+      padding-top: 30px
+      max-width: 850px
+      display: flex
+      justify-content: space-between
+      border-top: 1px solid $gray
+   &__block
+      & a
+         text-decoration: none
+         &:hover
+            text-decoration: underline
+      &-item
+         display: block
+         margin-bottom: 16px
+      &-title
+         font-size: 1.1rem
+         font-weight: 600
+         color: $black
+
+@import "./media"
+
+
