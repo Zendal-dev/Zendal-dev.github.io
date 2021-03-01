@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport"
+         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Woodies</title>
+   <!-- Preload fonts -->
+   <link rel="preload" href="./assets/fonts/Nunito-Regular.woff" as="font" crossorigin="anonymous" />
+   <link rel="preload" href="./assets/fonts/Nunito-SemiBold.woff" as="font" crossorigin="anonymous" />
+   <link rel="preload" href="./assets/fonts/Nunito-Bold.woff" as="font" crossorigin="anonymous" />
+   <link rel="preload" href="./assets/fonts/Nunito-ExtraBold.woff" as="font" crossorigin="anonymous" />
+   <!-- Main styles -->
+   <link rel="stylesheet" href="./css/styles.min.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+   <div class="container">
+      <div class="header__inner">
+         <a class="header__logo" href="#">
+            <picture>
+               <source srcset="./assets/images/logo-small.svg" media="(max-width: 468px)">
+               <img src="./assets/images/logo.png" alt="">
+            </picture>
+         </a>
+
+         <button class="burger-btn"></button>
+         <ul class="header__nav">
+            <li class="header__nav-item">
+               <a href="#intro">Home</a>
+            </li>
+            <li class="header__nav-item">
+               <a href="#about">About Us</a>
+            </li>
+            <li class="header__nav-item">
+               <a href="#process">How it works</a>
+            </li>
+            <li class="header__nav-item">
+               <a href="#categories">Categories</a>
+            </li>
+            <li class="header__nav-item">
+               <a href="#testimony">Testimony</a>
+            </li>
+         </ul>
+
+         <button class="header__btn btn">Sign Up</button>
+      </div>
+   </div>
+</header>
+
+
+<!-- Intro -->
+<section id="intro" class="intro">
+   <div class="container">
+      <div class="intro__inner">
+         <div class="intro__content" data-aos="fade-right">
+            <p class="intro__suptitle">
+               Are you looking for <strong>woodden furniture</strong> for your place?
+            </p>
+            <h1 class="intro__title">This is the Right Place</h1>
+            <button class="btn-primary">Explore Furniture</button>
+         </div>
+
+         <div class="intro__img">
+            <img src="./assets/images/intro-bg.png" alt="">
+         </div>
+      </div>
+   </div>
+</section>
+
+
+<!-- About -->
+<section id="about" class="section about">
+   <div class="container">
+      <div class="section-header">
+         <h2 class="section-header__title">Who we are</h2>
+         <span class="section-header__line"></span>
+         <h3 class="section-header__name">About us</h3>
+      </div>
+
+      <div class="about__blocks">
+         <div class="about__block about__block--first" data-aos="fade-right">
+            <img src="./assets/images/about-1.png" alt="">
+            <div class="about__info about__info--right">
+               <h4 class="about__info-title">WOODIES is the home of modern wooden furniture</h4>
+               <p class="about__info-text">the answer to your need for furniture with shapes, sizes and colors.</p>
+            </div>
+         </div>
+
+         <div class="about__block" data-aos="fade-left">
+            <div class="about__info about__info--left">
+               <h4 class="about__info-title">Customized furniture made just for you</h4>
+            </div>
+            <img class="about__img" src="./assets/images/about-2.png" alt="">
+         </div>
+      </div>
+   </div>
+</section>
+
+
+<!-- Process -->
+<section id="process" class="section process">
+   <div class="container">
+      <div class="section-header">
+         <h2 class="section-header__title">How to custom</h2>
+         <span class="section-header__line"></span>
+         <h3 class="section-header__name">HOW IT WORKS</h3>
+      </div>
+
+      <div class="process__items">
+         <div class="process__item" data-aos="fade-up">
+            <div class="process__item-img">
+               <img src="./assets/images/process-1.png" alt="">
+            </div>
+            <span class="process__item-name">Choose Design</span>
+         </div>
+         <div class="process__item" data-aos="fade-up">
+            <div class="process__item-img">
+               <img src="./assets/images/process-2.png" alt="">
+            </div>
+            <span class="process__item-name">Area measuring</span>
+         </div>
+         <div class="process__item" data-aos="fade-up">
+            <div class="process__item-img">
+               <img src="./assets/images/process-3.png" alt="">
+            </div>
+            <span class="process__item-name">Budgeting</span>
+         </div>
+         <div class="process__item" data-aos="fade-up">
+            <div class="process__item-img">
+               <img src="./assets/images/process-4.png" alt="">
+            </div>
+            <span class="process__item-name">Production</span>
+         </div>
+      </div>
+
+      <div class="process__btn">
+         <button class="btn-primary">Get Personalized Now</button>
+      </div>
+   </div>
+</section>
+
+
+<!-- Categories -->
+<section id="categories" class="section categories">
+   <div class="container">
+      <div class="section-header">
+         <h2 class="section-header__title">What we have</h2>
+         <span class="section-header__line"></span>
+         <h3 class="section-header__name">CATEGORIES</h3>
+      </div>
+
+      <div class="categories__items">
+         <div class="categories__line">
+            <div class="categories__item">
+               <h5 class="categories__item-name">Desk</h5>
+               <div class="categories__img">
+                  <img src="./assets/images/categories-1.png" alt="">
+               </div>
+               <div class="categories__btn">
+                  <button class="btn">Shop Now</button>
+               </div>
+            </div>
+            <div class="categories__item">
+               <h5 class="categories__item-name">Chair</h5>
+               <div class="categories__img">
+                  <img src="./assets/images/categories-2.png" alt="">
+               </div>
+               <div class="categories__btn">
+                  <button class="btn">Shop Now</button>
+               </div>
+            </div>
+            <div class="categories__item">
+               <h5 class="categories__item-name">Kitchenware</h5>
+               <div class="categories__img">
+                  <img src="./assets/images/categories-3.png" alt="">
+               </div>
+               <div class="categories__btn">
+                  <button class="btn">Shop Now</button>
+               </div>
+            </div>
+         </div>
+         <div class="categories__line">
+            <div class="categories__item">
+               <h5 class="categories__item-name">Book Shelf</h5>
+               <div class="categories__img">
+                  <img src="./assets/images/categories-4.png" alt="">
+               </div>
+               <div class="categories__btn">
+                  <button class="btn">Shop Now</button>
+               </div>
+            </div>
+            <div class="categories__item">
+               <h5 class="categories__item-name">Electronics</h5>
+               <div class="categories__img">
+                  <img src="./assets/images/categories-5.png" alt="">
+               </div>
+               <div class="categories__btn">
+                  <button class="btn">Shop Now</button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+
+
+<!-- Testimony -->
+<section id="testimony" class="section testimony">
+   <div class="container">
+      <div class="section-header">
+         <h2 class="section-header__title">What they say</h2>
+         <span class="section-header__line"></span>
+         <h3 class="section-header__name">TESTIMONY</h3>
+      </div>
+
+      <div class="swiper-container testimony-slider">
+         <div class="swiper-wrapper">
+            <div class="testimony-slider__item swiper-slide">
+               <div class="testimony-slider__images">
+                  <div class="testimony-slider__images-img">
+                     <img src="./assets/images/feedback-1.png" alt="">
+                  </div>
+                  <div class="testimony-slider__images-img">
+                     <img src="./assets/images/feedback-2.png" alt="">
+                  </div>
+               </div>
+
+               <div class="testimony-slider__feedback">
+                  <div class="testimony-slider__feedback-rating">
+                     <img src="./assets/images/star.svg" alt="">
+                     <img src="./assets/images/star.svg" alt="">
+                     <img src="./assets/images/star.svg" alt="">
+                     <img src="./assets/images/star.svg" alt="">
+                     <img src="./assets/images/star.svg" alt="">
+                  </div>
+                  <p class="testimony-slider__feedback-text">
+                     My experience with WOODIES is a complete success, from customed furniture, range of product, modern
+                     design, purchasing experience, the delivery and newsletter. Litterally everything is great. Thank
+                     you!
+                  </p>
+                  <div class="testimony-slider__feedback-author">
+                     <div class="testimony-slider__feedback-img">
+                        <img src="./assets/images/feedback-author.jpg" alt="">
+                     </div>
+                     <span>Sandra Dewi <br/> Jakarta Selatan</span>
+                  </div>
+               </div>
+            </div>
+
+            <div class="testimony-slider__item swiper-slide">
+               <div class="testimony-slider__images">
+                  <div class="testimony-slider__images-img">
+                     <img src="./assets/images/feedback-1.png" alt="">
+                  </div>
+                  <div class="testimony-slider__images-img">
+                     <img src="./assets/images/feedback-2.png" alt="">
+                  </div>
+               </div>
+
+               <div class="testimony-slider__feedback">
+                  <div class="testimony-slider__feedback-rating">
+                     <img src="./assets/images/star.svg" alt="">
+                     <img src="./assets/images/star.svg" alt="">
+                     <img src="./assets/images/star.svg" alt="">
+                     <img src="./assets/images/star.svg" alt="">
+                     <img src="./assets/images/star.svg" alt="">
+                  </div>
+                  <p class="testimony-slider__feedback-text">
+                     My experience with WOODIES is a complete success, from customed furniture, range of product, modern
+                     design, purchasing experience, the delivery and newsletter. Litterally everything is great. Thank
+                     you!
+                  </p>
+                  <div class="testimony-slider__feedback-author">
+                     <div class="testimony-slider__feedback-img">
+                        <img src="./assets/images/feedback-author.jpg" alt="">
+                     </div>
+                     <span>Sandra Dewi <br/> Jakarta Selatan</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="testimony-slider__buttons">
+            <button class="swiper-button-prev">
+               <svg width="33" height="8" viewBox="0 0 33 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                     d="M0.646447 3.64644C0.451184 3.84171 0.451184 4.15829 0.646447 4.35355L3.82843 7.53553C4.02369 7.73079 4.34027 7.73079 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82842L1.70711 4L4.53553 1.17157C4.7308 0.976308 4.7308 0.659726 4.53553 0.464464C4.34027 0.269201 4.02369 0.269201 3.82843 0.464464L0.646447 3.64644ZM33 3.5L1 3.5L1 4.5L33 4.5L33 3.5Z"
+                     fill="black"/>
+               </svg>
+               Prev
+            </button>
+            <button class="swiper-button-next">
+               Next
+               <svg width="33" height="8" viewBox="0 0 33 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                     d="M32.3536 4.35355C32.5488 4.15829 32.5488 3.84171 32.3536 3.64645L29.1716 0.464466C28.9763 0.269204 28.6597 0.269204 28.4645 0.464466C28.2692 0.659728 28.2692 0.976311 28.4645 1.17157L31.2929 4L28.4645 6.82843C28.2692 7.02369 28.2692 7.34027 28.4645 7.53553C28.6597 7.7308 28.9763 7.7308 29.1716 7.53553L32.3536 4.35355ZM0 4.5H32V3.5H0V4.5Z"
+                     fill="black"/>
+               </svg>
+            </button>
+         </div>
+
+         <div class="swiper-pagination testimony-slider__dots"></div>
+      </div> <!-- /.testimony-slider -->
+
+   </div> <!-- /.container -->
+</section>
+
+
+<!-- Footer -->
+<footer class="footer">
+
+   <div class="footer__form">
+      <div class="container">
+         <div class="footer__form-inner">
+            <p class="footer__form-text">
+               <strong>Subscribe to our newsletter <br/></strong>
+               A monthly digest of the new WOODIES products, hot offers, and resources.
+            </p>
+            <form>
+               <div class="footer__form-input">
+                  <input type="email" name="email" placeholder="Your email address">
+                  <button class="btn-primary">Subscribe</button>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+
+   <div class="container">
+      <div class="footer__content">
+         <div class="footer__block">
+            <img class="footer__block-item" src="./assets/images/logo.png" alt="">
+            <nav>
+               <a class="footer__block-item" href="tel:0128967453">(012) 8967453</a>
+               <a class="footer__block-item" href="mailto:woodies@gmail.com">woodies@gmail.com</a>
+            </nav>
+            <span class="footer__block-item">Jakarta, Indonesia</span>
+         </div>
+         <div class="footer__block">
+            <h6 class="footer__block-title footer__block-item">Product</h6>
+            <nav>
+               <a class="footer__block-item" href="#">Furnitures</a>
+               <a class="footer__block-item" href="#">Packages</a>
+               <a class="footer__block-item" href="#">Services</a>
+            </nav>
+         </div>
+         <div class="footer__block">
+            <h6 class="footer__block-title footer__block-item">Resources</h6>
+            <nav>
+               <a class="footer__block-item" href="#">Blog</a>
+               <a class="footer__block-item" href="#">FAQs</a>
+               <a class="footer__block-item" href="#">Contact Us</a>
+            </nav>
+         </div>
+         <div class="footer__block">
+            <h6 class="footer__block-title footer__block-item">Company</h6>
+            <nav>
+               <a class="footer__block-item" href="#">About Us</a>
+               <a class="footer__block-item" href="#">Jobs</a>
+               <a class="footer__block-item" href="#">Our Team</a>
+            </nav>
+         </div>
+         <div class="footer__block">
+            <h6 class="footer__block-title footer__block-item">Follow Us</h6>
+            <nav>
+               <a class="footer__block-item" href="#">Facebook</a>
+               <a class="footer__block-item" href="#">Instagram</a>
+               <a class="footer__block-item" href="#">Twitter</a>
+            </nav>
+         </div>
+      </div>
+
+      <div class="footer__copy">© 2020 WOODIES</div>
+   </div>
+</footer>
+
+<!-- Scripts -->
+<script src="./js/libs.min.js"></script>
+<script src="./js/index.js"></script>
+</body>
+</html>
